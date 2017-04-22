@@ -1,5 +1,7 @@
 package story;
 
+import java.awt.*;
+import java.awt.event.InputEvent;
 import java.io.Console;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -11,10 +13,13 @@ public class intro
     static InputMismatchException e = new InputMismatchException();
     static NullPointerException l = new NullPointerException        /*meme*/                                                                                                                                        ();
 
+    static final boolean DEBUG_MODE = true;
+
     public static void intro()
     {
         tryToEnterName();
         System.out.println("Hello " + CharacterStats.Character.cName);
+        clearConsole();
         System.out.println("Ready to start an adventure?");
         tryToEnterYesOrNo();
         clearConsole();
@@ -75,21 +80,42 @@ public class intro
         }
     }
 
+    public static void click(int x, int y) throws AWTException{
+        Robot bot = new Robot();
+        bot.mouseMove(x, y);
+        bot.mousePress(InputEvent.BUTTON1_MASK);
+        bot.mouseRelease(InputEvent.BUTTON1_MASK);
+    }
+
     public static void clearConsole()
     {
-        try
+        if(DEBUG_MODE)
         {
-            final String os = System.getProperty("os.name");
-            if (os.contains("Windows"))
+            System.out.print("\033[H\033[2J");
+            try
             {
-                Runtime.getRuntime().exec("cls");
-            } else
+                click(43,640);
+            } catch(AWTException e1)
             {
-                Runtime.getRuntime().exec("clear");
+                e1.printStackTrace();
             }
-        } catch (final Exception e)
+        }
+        else
         {
-            System.out.println("something went wrong :(");
+            try
+            {
+                final String os = System.getProperty("os.name");
+                if(os.contains("Windows"))
+                {
+                    Runtime.getRuntime().exec("cls");
+                } else
+                {
+                    Runtime.getRuntime().exec("clear");
+                }
+            } catch(final Exception e)
+            {
+                System.out.println("something went wrong :(");
+            }
         }
     }
 }

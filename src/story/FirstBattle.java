@@ -27,7 +27,7 @@ public class FirstBattle
             }
             else if (functions.Choice.toUpperCase().hashCode() == functions.Flee.toUpperCase().hashCode())
             {
-                if(functions.flee(monster) == true)
+                if(functions.flee(monster))
                 {
                     break;
                 }
