@@ -2,7 +2,7 @@ package stats;
 
 public enum CharacterStats
 {
-    Character(10, 5, 2, 3, 2, 1, 2, 1, "" , 0, 0, 0, "Level1");
+    Character(10, 5, 2, 3, 2, 1, 2, 1, "" , 0, 0, 0, "Level 1");
     public int cHP = 0;
     public int cMP = 0;
     public int cMDamage = 0;
@@ -15,7 +15,7 @@ public enum CharacterStats
     public int intelligence = 0;
     public String cName = "";
     public int currentXp = 0;
-    public String currentLevel = "Level1";
+    public String currentLevel = "Level 1";
     public int level1 = 10; //Xp need to pass the level
     public int level2 = 25;
     public int level3 = 60;

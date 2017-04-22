@@ -44,8 +44,8 @@
       <file leaf-file-name="FirstBattle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/story/FirstBattle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="225">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,14 +56,22 @@
       <file leaf-file-name="Battle.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/functions/Battle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="88" column="50" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+            <state relative-caret-position="135">
+              <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#339#366#0" expanded="true" />
-                <element signature="e#1470#1499#1" expanded="true" />
-                <element signature="e#1508#1576#1" expanded="true" />
-                <element signature="e#1671#1716#1" expanded="true" />
+                <element signature="e#1463#1492#1" expanded="true" />
+                <element signature="e#1501#1544#1" expanded="true" />
+                <element signature="e#1658#1684#0" expanded="true" />
+                <element signature="e#1658#1684#0" expanded="true" />
+                <element signature="e#1695#1740#1" expanded="true" />
+                <element signature="e#1768#1804#0" expanded="true" />
+                <element signature="e#1768#1804#0" expanded="true" />
+                <element signature="e#3739#3824#0" expanded="true" />
+                <element signature="e#3739#3824#0" expanded="true" />
+                <element signature="e#3739#3824#0" expanded="true" />
+                <element signature="e#3739#3824#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,52 +90,49 @@
       <file leaf-file-name="Functions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/functions/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="163" column="26" lean-forward="false" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
+            <state relative-caret-position="-1780">
+              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
-                <element signature="method#tryToEnterCombatOption#0;class#Functions#0" expanded="false" />
                 <element signature="e#554#646#0" expanded="true" />
                 <element signature="e#554#646#0" expanded="true" />
                 <element signature="e#554#646#0" expanded="true" />
                 <element signature="e#554#646#0" expanded="true" />
-                <element signature="e#674#775#0" expanded="true" />
-                <element signature="e#674#775#0" expanded="true" />
-                <element signature="e#674#775#0" expanded="true" />
-                <element signature="e#674#775#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#805#899#0" expanded="true" />
-                <element signature="e#2552#2618#0" expanded="true" />
-                <element signature="e#2552#2618#0" expanded="true" />
-                <element signature="e#2552#2618#0" expanded="true" />
-                <element signature="e#2552#2618#0" expanded="true" />
-                <element signature="e#2730#2760#0" expanded="true" />
-                <element signature="e#2730#2760#0" expanded="true" />
-                <element signature="method#Magic#0;class#Functions#0" expanded="false" />
-                <element signature="e#3293#3335#0" expanded="true" />
-                <element signature="e#3293#3335#0" expanded="true" />
-                <element signature="e#3977#4043#0" expanded="true" />
-                <element signature="e#3977#4043#0" expanded="true" />
-                <element signature="e#3977#4043#0" expanded="true" />
-                <element signature="e#3977#4043#0" expanded="true" />
-                <element signature="e#4167#4197#0" expanded="true" />
-                <element signature="e#4167#4197#0" expanded="true" />
+                <element signature="e#676#770#0" expanded="true" />
+                <element signature="e#676#770#0" expanded="true" />
+                <element signature="e#676#770#0" expanded="true" />
+                <element signature="e#676#770#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#800#901#0" expanded="true" />
+                <element signature="e#2553#2619#0" expanded="true" />
+                <element signature="e#2553#2619#0" expanded="true" />
+                <element signature="e#2553#2619#0" expanded="true" />
+                <element signature="e#2553#2619#0" expanded="true" />
+                <element signature="e#2731#2761#0" expanded="true" />
+                <element signature="e#2731#2761#0" expanded="true" />
+                <element signature="e#3294#3336#0" expanded="true" />
+                <element signature="e#3294#3336#0" expanded="true" />
+                <element signature="e#3979#4045#0" expanded="true" />
+                <element signature="e#3979#4045#0" expanded="true" />
+                <element signature="e#3979#4045#0" expanded="true" />
+                <element signature="e#3979#4045#0" expanded="true" />
+                <element signature="e#4169#4199#0" expanded="true" />
+                <element signature="e#4169#4199#0" expanded="true" />
                 <element signature="method#hitMonster#0;class#Functions#0" expanded="false" />
                 <element signature="method#hitCharacter#0;class#Functions#0" expanded="false" />
-                <element signature="e#5228#5259#0" expanded="true" />
-                <element signature="e#5228#5259#0" expanded="true" />
+                <element signature="e#5230#5261#0" expanded="true" />
+                <element signature="e#5230#5261#0" expanded="true" />
                 <element signature="method#magicOrCombat#0;class#Functions#0" expanded="false" />
-                <element signature="method#isCharacterDied#0;class#Functions#0" expanded="false" />
                 <element signature="method#flee#0;class#Functions#0" expanded="false" />
                 <element signature="method#canUseMagic#0;class#Functions#0" expanded="false" />
                 <element signature="method#click#0;class#Functions#0" expanded="false" />
-                <element signature="e#6694#6718#1" expanded="true" />
+                <element signature="e#6696#6720#1" expanded="true" />
                 <element signature="method#clearConsole#0;class#Functions#0" expanded="false" />
               </folding>
             </state>
@@ -137,8 +142,8 @@
       <file leaf-file-name="CharacterStats.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stats/CharacterStats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+            <state relative-caret-position="-189">
+              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -169,15 +174,15 @@
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/src/story/intro.java" />
         <option value="$PROJECT_DIR$/src/stats/MonsterStats.java" />
-        <option value="$PROJECT_DIR$/src/functions/Functions.java" />
         <option value="$PROJECT_DIR$/src/story/FirstBattle.java" />
+        <option value="$PROJECT_DIR$/src/functions/Functions.java" />
         <option value="$PROJECT_DIR$/src/stats/CharacterStats.java" />
         <option value="$PROJECT_DIR$/src/functions/Battle.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+    <option name="x" value="-5" />
     <option name="y" value="23" />
     <option name="width" value="1376" />
     <option name="height" value="690" />
@@ -435,12 +440,12 @@
       <option name="presentableId" value="Default" />
       <updated>1492821025626</updated>
       <workItem from="1492821076793" duration="19000" />
-      <workItem from="1492821108650" duration="8612000" />
+      <workItem from="1492821108650" duration="11467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8631000" />
+    <option name="totallyTimeSpent" value="11486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,7 +457,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="23" width="1376" height="690" extended-state="0" />
+    <frame x="-5" y="23" width="1376" height="690" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -461,7 +466,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35909823" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -491,12 +496,6 @@
           <line>189</line>
           <properties />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/functions/Functions.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="4" />
@@ -567,16 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/story/FirstBattle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stats/MonsterStats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -585,62 +574,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/story/FirstBattle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/stats/CharacterStats.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        <state relative-caret-position="-189">
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="163" column="26" lean-forward="false" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
+        <state relative-caret-position="-1780">
+          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding>
-            <element signature="method#tryToEnterCombatOption#0;class#Functions#0" expanded="false" />
             <element signature="e#554#646#0" expanded="true" />
             <element signature="e#554#646#0" expanded="true" />
             <element signature="e#554#646#0" expanded="true" />
             <element signature="e#554#646#0" expanded="true" />
-            <element signature="e#674#775#0" expanded="true" />
-            <element signature="e#674#775#0" expanded="true" />
-            <element signature="e#674#775#0" expanded="true" />
-            <element signature="e#674#775#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#805#899#0" expanded="true" />
-            <element signature="e#2552#2618#0" expanded="true" />
-            <element signature="e#2552#2618#0" expanded="true" />
-            <element signature="e#2552#2618#0" expanded="true" />
-            <element signature="e#2552#2618#0" expanded="true" />
-            <element signature="e#2730#2760#0" expanded="true" />
-            <element signature="e#2730#2760#0" expanded="true" />
-            <element signature="method#Magic#0;class#Functions#0" expanded="false" />
-            <element signature="e#3293#3335#0" expanded="true" />
-            <element signature="e#3293#3335#0" expanded="true" />
-            <element signature="e#3977#4043#0" expanded="true" />
-            <element signature="e#3977#4043#0" expanded="true" />
-            <element signature="e#3977#4043#0" expanded="true" />
-            <element signature="e#3977#4043#0" expanded="true" />
-            <element signature="e#4167#4197#0" expanded="true" />
-            <element signature="e#4167#4197#0" expanded="true" />
+            <element signature="e#676#770#0" expanded="true" />
+            <element signature="e#676#770#0" expanded="true" />
+            <element signature="e#676#770#0" expanded="true" />
+            <element signature="e#676#770#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#800#901#0" expanded="true" />
+            <element signature="e#2553#2619#0" expanded="true" />
+            <element signature="e#2553#2619#0" expanded="true" />
+            <element signature="e#2553#2619#0" expanded="true" />
+            <element signature="e#2553#2619#0" expanded="true" />
+            <element signature="e#2731#2761#0" expanded="true" />
+            <element signature="e#2731#2761#0" expanded="true" />
+            <element signature="e#3294#3336#0" expanded="true" />
+            <element signature="e#3294#3336#0" expanded="true" />
+            <element signature="e#3979#4045#0" expanded="true" />
+            <element signature="e#3979#4045#0" expanded="true" />
+            <element signature="e#3979#4045#0" expanded="true" />
+            <element signature="e#3979#4045#0" expanded="true" />
+            <element signature="e#4169#4199#0" expanded="true" />
+            <element signature="e#4169#4199#0" expanded="true" />
             <element signature="method#hitMonster#0;class#Functions#0" expanded="false" />
             <element signature="method#hitCharacter#0;class#Functions#0" expanded="false" />
-            <element signature="e#5228#5259#0" expanded="true" />
-            <element signature="e#5228#5259#0" expanded="true" />
+            <element signature="e#5230#5261#0" expanded="true" />
+            <element signature="e#5230#5261#0" expanded="true" />
             <element signature="method#magicOrCombat#0;class#Functions#0" expanded="false" />
-            <element signature="method#isCharacterDied#0;class#Functions#0" expanded="false" />
             <element signature="method#flee#0;class#Functions#0" expanded="false" />
             <element signature="method#canUseMagic#0;class#Functions#0" expanded="false" />
             <element signature="method#click#0;class#Functions#0" expanded="false" />
-            <element signature="e#6694#6718#1" expanded="true" />
+            <element signature="e#6696#6720#1" expanded="true" />
             <element signature="method#clearConsole#0;class#Functions#0" expanded="false" />
           </folding>
         </state>
@@ -648,14 +644,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/Battle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="88" column="50" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+        <state relative-caret-position="135">
+          <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#339#366#0" expanded="true" />
-            <element signature="e#1470#1499#1" expanded="true" />
-            <element signature="e#1508#1576#1" expanded="true" />
-            <element signature="e#1671#1716#1" expanded="true" />
+            <element signature="e#1463#1492#1" expanded="true" />
+            <element signature="e#1501#1544#1" expanded="true" />
+            <element signature="e#1658#1684#0" expanded="true" />
+            <element signature="e#1658#1684#0" expanded="true" />
+            <element signature="e#1695#1740#1" expanded="true" />
+            <element signature="e#1768#1804#0" expanded="true" />
+            <element signature="e#1768#1804#0" expanded="true" />
+            <element signature="e#3739#3824#0" expanded="true" />
+            <element signature="e#3739#3824#0" expanded="true" />
+            <element signature="e#3739#3824#0" expanded="true" />
+            <element signature="e#3739#3824#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -20,9 +20,9 @@ public class Functions
     public static void tryToEnterCombatOption(MonsterStats monster)
     {
         System.out.print("HP: " + CharacterStats.Character.cHP + " Melee damage: " + CharacterStats.Character.cDamage);
-        System.out.print(" Mp: " + CharacterStats.Character.cMP + " Magic damage: " + CharacterStats.Character.cMDamage + "\n");
-        System.out.println(monster + "'s " + "HP: " + monster.mHP + " " + monster.typeOfDamage + ": " + monster.mStrength);
-        System.out.println("Enter either: \n Fight, Magic, or Flee");
+        System.out.println(" Mp: " + CharacterStats.Character.cMP + " Magic damage: " + CharacterStats.Character.cMDamage);
+        System.out.println(monster + "'s " + "HP: " + monster.mHP + " " + monster.typeOfDamage + " damage: " + monster.mStrength);
+        System.out.println("Enter either: \nFight, Magic, or Flee");
         while (true)
         {
             try
@@ -97,7 +97,7 @@ public class Functions
                 {
                     System.out.println("Hit");
                     hitMonster(monster, "MAGIC");
-                    if(monster.mHP > 0)
+                    if(monster.mHP >= 0)
                     {
                         Thread.sleep(1000);
                         System.out.println("Monster hit you back");
