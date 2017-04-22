@@ -21,7 +21,7 @@ public class intro
         System.out.println("Hello " + CharacterStats.Character.cName);
         System.out.println("Ready to start an adventure?");
         tryToEnterYesOrNo();
-        clearConsole();
+
     }
 
     public static void main(String[] args)
@@ -79,42 +79,7 @@ public class intro
         }
     }
 
-    public static void click(int x, int y) throws AWTException{
-        Robot bot = new Robot();
-        bot.mouseMove(x, y);
-        bot.mousePress(InputEvent.BUTTON1_MASK);
-        bot.mouseRelease(InputEvent.BUTTON1_MASK);
-    }
 
-    public static void clearConsole()
-    {
-        if(DEBUG_MODE)
-        {
-            System.out.print("\033[H\033[2J");
-            try
-            {
-                click(43,640);
-            } catch(AWTException e1)
-            {
-                e1.printStackTrace();
-            }
-        }
-        else
-        {
-            try
-            {
-                final String os = System.getProperty("os.name");
-                if(os.contains("Windows"))
-                {
-                    Runtime.getRuntime().exec("cls");
-                } else
-                {
-                    Runtime.getRuntime().exec("clear");
-                }
-            } catch(final Exception e)
-            {
-                System.out.println("something went wrong :(");
-            }
-        }
-    }
+
+
 }

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/story/FirstBattle.java" line="17" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="99cea0d9-e728-4567-ab0d-6a8d244fc8e0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -10,17 +13,60 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="RPG" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="intro.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="intro.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/story/intro.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+            <state relative-caret-position="1125">
+              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
-                <element signature="e#2378#2402#1" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstBattle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/story/FirstBattle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Battle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/functions/Battle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MonsterStats.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stats/MonsterStats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -28,8 +74,56 @@
       <file leaf-file-name="Functions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/functions/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="-193">
+              <caret line="207" column="12" lean-forward="false" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
+              <folding>
+                <element signature="e#554#646#0" expanded="true" />
+                <element signature="e#554#646#0" expanded="true" />
+                <element signature="e#554#646#0" expanded="true" />
+                <element signature="e#554#646#0" expanded="true" />
+                <element signature="e#674#775#0" expanded="true" />
+                <element signature="e#674#775#0" expanded="true" />
+                <element signature="e#674#775#0" expanded="true" />
+                <element signature="e#674#775#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#805#899#0" expanded="true" />
+                <element signature="e#2552#2618#0" expanded="true" />
+                <element signature="e#2552#2618#0" expanded="true" />
+                <element signature="e#2552#2618#0" expanded="true" />
+                <element signature="e#2552#2618#0" expanded="true" />
+                <element signature="e#2730#2760#0" expanded="true" />
+                <element signature="e#2730#2760#0" expanded="true" />
+                <element signature="e#3293#3335#0" expanded="true" />
+                <element signature="e#3293#3335#0" expanded="true" />
+                <element signature="e#3977#4043#0" expanded="true" />
+                <element signature="e#3977#4043#0" expanded="true" />
+                <element signature="e#3977#4043#0" expanded="true" />
+                <element signature="e#3977#4043#0" expanded="true" />
+                <element signature="e#4167#4197#0" expanded="true" />
+                <element signature="e#4167#4197#0" expanded="true" />
+                <element signature="e#5228#5259#0" expanded="true" />
+                <element signature="e#5228#5259#0" expanded="true" />
+                <element signature="e#6704#6721#0" expanded="true" />
+                <element signature="method#click#0;class#Functions#0" expanded="false" />
+                <element signature="e#7803#7827#1" expanded="true" />
+                <element signature="method#clearConsole#0;class#Functions#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterStats.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stats/CharacterStats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -37,8 +131,16 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>RPG</find>
       <find>RPG0</find>
     </findStrings>
   </component>
@@ -50,14 +152,18 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/src/story/FirstBattle.java" />
         <option value="$PROJECT_DIR$/src/story/intro.java" />
+        <option value="$PROJECT_DIR$/src/stats/MonsterStats.java" />
+        <option value="$PROJECT_DIR$/src/stats/CharacterStats.java" />
+        <option value="$PROJECT_DIR$/src/functions/Functions.java" />
+        <option value="$PROJECT_DIR$/src/story/FirstBattle.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="y" value="23" />
-    <option name="width" value="1366" />
+    <option name="width" value="1376" />
     <option name="height" value="690" />
   </component>
   <component name="ProjectView">
@@ -149,7 +255,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -165,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Intro">
+  <component name="RunManager" selected="Application.Launch">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -310,15 +416,25 @@
       <option name="presentableId" value="Default" />
       <updated>1492821025626</updated>
       <workItem from="1492821076793" duration="19000" />
-      <workItem from="1492821108650" duration="1701000" />
+      <workItem from="1492821108650" duration="7004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1720000" />
+    <option name="totallyTimeSpent" value="7023000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1366" height="690" extended-state="6" />
+    <frame x="-7" y="23" width="1376" height="690" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -326,11 +442,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24418604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -389,30 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stats/MonsterStats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stats/CharacterStats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/story/FirstBattle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RPG.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -421,23 +513,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/Functions.java">
+    <entry file="file://$PROJECT_DIR$/.project">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="30">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/story/intro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+        <state relative-caret-position="1125">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
-            <element signature="e#2378#2402#1" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/stats/MonsterStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stats/CharacterStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/Functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="207" column="12" lean-forward="false" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
+          <folding>
+            <element signature="e#554#646#0" expanded="true" />
+            <element signature="e#554#646#0" expanded="true" />
+            <element signature="e#554#646#0" expanded="true" />
+            <element signature="e#554#646#0" expanded="true" />
+            <element signature="e#674#775#0" expanded="true" />
+            <element signature="e#674#775#0" expanded="true" />
+            <element signature="e#674#775#0" expanded="true" />
+            <element signature="e#674#775#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#805#899#0" expanded="true" />
+            <element signature="e#2552#2618#0" expanded="true" />
+            <element signature="e#2552#2618#0" expanded="true" />
+            <element signature="e#2552#2618#0" expanded="true" />
+            <element signature="e#2552#2618#0" expanded="true" />
+            <element signature="e#2730#2760#0" expanded="true" />
+            <element signature="e#2730#2760#0" expanded="true" />
+            <element signature="e#3293#3335#0" expanded="true" />
+            <element signature="e#3293#3335#0" expanded="true" />
+            <element signature="e#3977#4043#0" expanded="true" />
+            <element signature="e#3977#4043#0" expanded="true" />
+            <element signature="e#3977#4043#0" expanded="true" />
+            <element signature="e#3977#4043#0" expanded="true" />
+            <element signature="e#4167#4197#0" expanded="true" />
+            <element signature="e#4167#4197#0" expanded="true" />
+            <element signature="e#5228#5259#0" expanded="true" />
+            <element signature="e#5228#5259#0" expanded="true" />
+            <element signature="e#6704#6721#0" expanded="true" />
+            <element signature="method#click#0;class#Functions#0" expanded="false" />
+            <element signature="e#7803#7827#1" expanded="true" />
+            <element signature="method#clearConsole#0;class#Functions#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/story/FirstBattle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/Battle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
