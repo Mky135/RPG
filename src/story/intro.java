@@ -19,7 +19,6 @@ public class intro
     {
         tryToEnterName();
         System.out.println("Hello " + CharacterStats.Character.cName);
-        clearConsole();
         System.out.println("Ready to start an adventure?");
         tryToEnterYesOrNo();
         clearConsole();
