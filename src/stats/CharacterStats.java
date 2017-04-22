@@ -16,7 +16,7 @@ public enum CharacterStats
     public String cName = "";
     public int currentXp = 0;
     public String currentLevel = "Level1";
-    public int Level1 = 10; //Xp need to pass the level
+    public int level1 = 10; //Xp need to pass the level
     public int level2 = 25;
     public int level3 = 60;
     public int level4 = 110;

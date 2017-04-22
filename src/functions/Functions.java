@@ -199,43 +199,6 @@ public class Functions
         }
     }
 
-    public static void battle(MonsterStats monster) throws InterruptedException
-    {
-        clearConsole();
-        Thread.sleep(500);
-        while (monster.mHP >= 0  && isCharacterDied() != true && CharacterStats.Character.cHP > 0)
-        {
-            tryToEnterCombatOption(monster);
-            if(CharacterStats.Character.cHP <= 0)
-            {
-                hitCharacter(monster);
-                break;
-            }
-            else if (Choice.toUpperCase().hashCode() == Fight.toUpperCase().hashCode())
-            {
-                fight(monster);
-            }
-            else if (Choice.toUpperCase().hashCode() == Magic.toUpperCase().hashCode())
-            {
-                Magic(monster);
-            }
-            else if (Choice.toUpperCase().hashCode() == Flee.toUpperCase().hashCode())
-            {
-                if(flee(monster))
-                {
-                    break;
-                }
-            }
-            Thread.sleep(3000);
-            clearConsole();
-
-        }
-        if(monster.mHP <= 0)
-        {
-            System.out.println("You won");
-        }
-
-    }
     public static void print(String value)
     {
         System.out.println(value);
