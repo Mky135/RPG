@@ -2,7 +2,7 @@ package stats;
 
 public enum CharacterStats
 {
-    Character(10, 5, 2, 3, 2, 1, 2, 1, "" , 0, 0, 0, "Level 1");
+    Character(10, 5, 2, 3, 2, 1, 2, 1, "" , 0, 0, 0, "Level 1", 0);
     public int cHP = 0;
     public int cMP = 0;
     public int cMDamage = 0;
@@ -16,6 +16,7 @@ public enum CharacterStats
     public String cName = "";
     public int currentXp = 0;
     public String currentLevel = "Level 1";
+    public int upgradePoint;
     public int level1 = 10; //Xp need to pass the level
     public int level2 = 25;
     public int level3 = 60;
@@ -27,7 +28,7 @@ public enum CharacterStats
     public int level9 = 450;
     public int level10 = 750;
 
-    CharacterStats(int Hp, int Mp, int damage, int mDamage, int Speed, int mSpeed, int intelligence, int spell, String name , int magicRest, int meleeRest , int currentXp, String currentLevel)
+    CharacterStats(int Hp, int Mp, int damage, int mDamage, int Speed, int mSpeed, int intelligence, int spell, String name , int magicRest, int meleeRest , int currentXp, String currentLevel, int upgradePoint)
     {
         cHP = Hp;
         cMP = Mp;
@@ -42,5 +43,6 @@ public enum CharacterStats
         this.meleeRest = meleeRest;
         this.currentXp = currentXp;
         this.currentLevel = currentLevel;
+        this.upgradePoint = upgradePoint;
     }
 }

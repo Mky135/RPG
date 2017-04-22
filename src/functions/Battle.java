@@ -12,7 +12,7 @@ public class Battle
     public static void battle(MonsterStats monster) throws InterruptedException
     {
         functions.clearConsole();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         while (monster.mHP > 0 && functions.isCharacterDied() != true)
         {
             functions.tryToEnterCombatOption(monster);
@@ -46,6 +46,7 @@ public class Battle
             dropXp(monster);
         }
     }
+
     public static void dropXp(MonsterStats monster)
     {
         Random random = new Random();
@@ -54,57 +55,32 @@ public class Battle
         System.out.println("You gained " + Xp + " Xp");
         int cXP = CharacterStats.Character.currentXp;
         System.out.println("Your current Xp is: " + cXP + " Xp");
-        if(cXP >= CharacterStats.Character.level1)
-        {
-            System.out.println("Your are now level 2");
-            CharacterStats.Character.currentLevel = "Level 2";
-        }
-        if(cXP >= CharacterStats.Character.level2)
-        {
-            System.out.println("Your are now level 3");
-            CharacterStats.Character.currentLevel = "Level 3";
-        }
-        if(cXP >= CharacterStats.Character.level3)
-        {
-            System.out.println("Your are now level 4");
-            CharacterStats.Character.currentLevel = "Level 4";
-        }
-        if(cXP >= CharacterStats.Character.level4)
-        {
-            System.out.println("Your are now level 5");
-            CharacterStats.Character.currentLevel = "Level 5";
-        }
-        if(cXP >= CharacterStats.Character.level5)
-        {
-            System.out.println("Your are now level 6");
-            CharacterStats.Character.currentLevel = "Level 6";
-        }
-        if(cXP >= CharacterStats.Character.level6)
-        {
-            System.out.println("Your are now level 7");
-            CharacterStats.Character.currentLevel = "Level 7";
-        }
-        if(cXP >= CharacterStats.Character.level7)
-        {
-            System.out.println("Your are now level 8");
-            CharacterStats.Character.currentLevel = "Level 8";
-        }
-        if(cXP >= CharacterStats.Character.level8)
-        {
-            System.out.println("Your are now level 9");
-            CharacterStats.Character.currentLevel = "Level 9";
-        }
-        if(cXP >= CharacterStats.Character.level9)
-        {
-            System.out.println("Your are now level 10");
-            CharacterStats.Character.currentLevel = "Level 10";
-        }
-        if(cXP >= CharacterStats.Character.level10)
-        {
-            System.out.println("Your are now level 11");
-            CharacterStats.Character.currentLevel = "Level 11";
-        }
+        checkIfLevelUp(Xp);
         System.out.println(CharacterStats.Character.cName + "'s level: " + CharacterStats.Character.currentLevel);
 
+    }
+    public static void levelUp(int level)
+    {
+        System.out.println("Your are now level " + level);
+        CharacterStats.Character.currentLevel = "Level " + level;
+        System.out.println("You gained " + level/2 + " upgrade points");
+        CharacterStats.Character.upgradePoint = CharacterStats.Character.upgradePoint + level/2;
+    }
+    public static void checkIfLevelUp(int XP)
+    {
+        int Level = 0;
+        for(int value = 1; value <= 11; value ++)
+        {
+            if(value == 1) { Level = CharacterStats.Character.level1; } else if(value == 2) { Level = CharacterStats.Character.level2; } else if(value == 3) { Level = CharacterStats.Character.level3; } else if(value == 4) { Level = CharacterStats.Character.level4; } else if(value == 5) { Level = CharacterStats.Character.level5; } else if(value == 6) { Level = CharacterStats.Character.level6; } else if(value == 7) { Level = CharacterStats.Character.level7; } else if(value == 8) { Level = CharacterStats.Character.level8; } else if(value == 9) { Level = CharacterStats.Character.level9; } else if(value == 10) { Level = CharacterStats.Character.level10; } else {levelUp(11);}
+            if(XP >= Level)
+            {
+                levelUp(value);
+
+            } else if(XP <= Level)
+            {
+                System.out.println("Xp left to level up: " + (Level - XP));
+                break;
+            }
+        }
     }
 }

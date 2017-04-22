@@ -97,7 +97,7 @@ public class Functions
                 {
                     System.out.println("Hit");
                     hitMonster(monster, "MAGIC");
-                    if(monster.mHP >= 0)
+                    if(monster.mHP > 0)
                     {
                         Thread.sleep(1000);
                         System.out.println("Monster hit you back");
