@@ -93,11 +93,16 @@ public class Functions
 
     public static void hitCharacter(MonsterStats monster)
     {
-        if (monster.mHP > 0)
+     
+      if (monster.mHP > 0 && CharacterStats.Character.cHP <= 0)
         {
             CharacterStats.Character.cHP = CharacterStats.Character.cHP - monster.mStrength;
             System.out.println(CharacterStats.Character.cName + "'s Hp: " + CharacterStats.Character.cHP);
         }
+      else
+      {
+          System.out.println("You died!");
+      }
     }
 
     public static int magicOrCombat(String magicOrCombat)
