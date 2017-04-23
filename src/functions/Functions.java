@@ -69,11 +69,14 @@ public class Functions
             } else if(CharacterStats.Character.cMSpeed <= monster.mSpeed)
             {
                 Thread.sleep(1000);
-                System.out.println("You're slower then" + monster + ", " + monster + " hit you first");
+                System.out.println("You're slower then " + monster + ", " + monster + " hit you first");
                 hitCharacter(monster);
-                Thread.sleep(500);
-                System.out.println("You hit " + monster + " back");
-                hitMonster(monster, "FIGHT");
+                Thread.sleep(1000);
+                if(CharacterStats.Character.cHP > 0)
+                {
+                    System.out.println("You hit " + monster + " back");
+                    hitMonster(monster, "FIGHT");
+                }
             } else
             {
                 print("Something went wrong");
@@ -106,7 +109,7 @@ public class Functions
                 } else if(CharacterStats.Character.cMSpeed <= monster.mSpeed)
                 {
                     Thread.sleep(1000);
-                    System.out.println("You're slower then" + monster + ", " + monster + " hit you first");
+                    System.out.println("You're slower then " + monster + ", " + monster + " hit you first");
                     hitCharacter(monster);
                     Thread.sleep(500);
                     System.out.println("You hit " + monster + " back");
@@ -132,19 +135,17 @@ public class Functions
         System.out.println("Monster Hp: " + monster.mHP);
     }
 
-    public static String hitCharacter(MonsterStats monster)
+    public static void hitCharacter(MonsterStats monster)
     {
-     
+        CharacterStats.Character.cHP = CharacterStats.Character.cHP - monster.mStrength;
       if (monster.mHP > 0 && CharacterStats.Character.cHP > 0)
         {
-            CharacterStats.Character.cHP = CharacterStats.Character.cHP - monster.mStrength;
             System.out.println(CharacterStats.Character.cName + "'s Hp: " + CharacterStats.Character.cHP);
-            return "Alive";
+
         }
       else
       {
           System.out.println("You were killed by " + monster);
-          return "Died";
       }
     }
 
