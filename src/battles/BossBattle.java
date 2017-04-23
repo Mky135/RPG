@@ -1,21 +1,21 @@
-package story;
+package battles;
 
-import functions.Functions;
-import stats.CharacterStats;
-import story.intro;
 import functions.Battle;
+import functions.Functions;
 import stats.MonsterStats;
+import story.intro;
 
-public class FirstBattle
+public class BossBattle
 {
+
     static Functions functions;
-    static  Battle battle;
-    static intro intro;
+    static Battle battle;
+    static story.intro intro;
     @SuppressWarnings("static-access")
     public static void main(String[] args) throws InterruptedException
     {
         MonsterStats monster;
-        monster = MonsterStats.Troll;
+        monster = MonsterStats.Boss;
         intro.intro();
         battle.battle(monster);
     }

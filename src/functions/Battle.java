@@ -45,6 +45,7 @@ public class Battle
             System.out.println("You won");
             dropXp(monster);
         }
+
     }
 
     public static void dropXp(MonsterStats monster)
