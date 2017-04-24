@@ -40,43 +40,99 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spells.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Inventory/Spells.java">
+      <file leaf-file-name="TotalSwords.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/spellsAndSwords/TotalSwords.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Swords.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Inventory/Swords.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BossBattle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/battles/BossBattle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="330">
+              <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#238#272#0" expanded="true" />
+                <element signature="e#825#835#1" expanded="true" />
+                <element signature="e#821#903#0" expanded="true" />
+                <element signature="e#821#903#0" expanded="true" />
+                <element signature="e#821#903#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MonsterStats.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SwordsInventory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Inventory/SwordsInventory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1735#1745#1" expanded="true" />
+                <element signature="e#1731#1824#0" expanded="true" />
+                <element signature="e#1731#1824#0" expanded="true" />
+                <element signature="e#1731#1824#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TotalSpells.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/spellsAndSwords/TotalSpells.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+              <folding>
+                <element signature="e#230#253#0" expanded="true" />
+                <element signature="e#243#251#0" expanded="true" />
+                <element signature="e#1100#1110#1" expanded="true" />
+                <element signature="e#1096#1202#0" expanded="true" />
+                <element signature="e#1096#1202#0" expanded="true" />
+                <element signature="e#1096#1202#0" expanded="true" />
+                <element signature="e#1280#1281#0" expanded="true" />
+                <element signature="e#1326#1327#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpellsInventory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Inventory/SpellsInventory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+              <folding>
+                <element signature="e#1556#1566#1" expanded="true" />
+                <element signature="e#1552#1674#0" expanded="true" />
+                <element signature="e#1552#1674#0" expanded="true" />
+                <element signature="e#1552#1674#0" expanded="true" />
+                <element signature="e#1762#1772#1" expanded="true" />
+                <element signature="e#1758#1881#0" expanded="true" />
+                <element signature="e#1758#1881#0" expanded="true" />
+                <element signature="e#1758#1881#0" expanded="true" />
+                <element signature="e#2169#2170#0" expanded="true" />
+                <element signature="e#2198#2199#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckInventory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Inventory/CheckInventory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="119" column="51" lean-forward="false" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#1739#1749#1" expanded="true" />
+                <element signature="e#1735#2199#0" expanded="true" />
+                <element signature="e#1735#2199#0" expanded="true" />
+                <element signature="e#1735#2199#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MonsterStats.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stats/MonsterStats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="-40">
               <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
               <folding />
             </state>
@@ -86,8 +142,8 @@
       <file leaf-file-name="Functions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/functions/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="141" column="9" lean-forward="false" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+            <state relative-caret-position="116">
+              <caret line="91" column="50" lean-forward="true" selection-start-line="91" selection-start-column="50" selection-end-line="91" selection-end-column="50" />
               <folding>
                 <element signature="e#554#646#0" expanded="true" />
                 <element signature="e#554#646#0" expanded="true" />
@@ -124,7 +180,6 @@
                 <element signature="e#5290#5321#0" expanded="true" />
                 <element signature="method#magicOrCombat#0;class#Functions#0" expanded="false" />
                 <element signature="method#flee#0;class#Functions#0" expanded="false" />
-                <element signature="method#canUseMagic#0;class#Functions#0" expanded="false" />
                 <element signature="method#click#0;class#Functions#0" expanded="false" />
                 <element signature="e#6731#6755#1" expanded="true" />
                 <element signature="method#clearConsole#0;class#Functions#0" expanded="false" />
@@ -133,10 +188,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Battle.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Battle.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/functions/Battle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
+            <state relative-caret-position="287">
               <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -148,8 +203,8 @@
       <file leaf-file-name="CharacterStats.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stats/CharacterStats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="165">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -160,8 +215,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -184,12 +239,18 @@
         <option value="$PROJECT_DIR$/src/story/TrollBattle.java" />
         <option value="$PROJECT_DIR$/src/battles/BossBattle.java" />
         <option value="$PROJECT_DIR$/src/functions/Battle.java" />
-        <option value="$PROJECT_DIR$/src/stats/CharacterStats.java" />
         <option value="$PROJECT_DIR$/src/functions/Functions.java" />
         <option value="$PROJECT_DIR$/src/stats/MonsterStats.java" />
         <option value="$PROJECT_DIR$/src/battles/TrollBattle.java" />
         <option value="$PROJECT_DIR$/src/functions/CharacterInventory.java" />
         <option value="$PROJECT_DIR$/src/Inventory/Swords.java" />
+        <option value="$PROJECT_DIR$/src/Inventory/Spells.java" />
+        <option value="$PROJECT_DIR$/src/spellsAndSwords/TotalSwords.java" />
+        <option value="$PROJECT_DIR$/src/Inventory/SwordsInventory.java" />
+        <option value="$PROJECT_DIR$/src/stats/CharacterStats.java" />
+        <option value="$PROJECT_DIR$/src/spellsAndSwords/TotalSpells.java" />
+        <option value="$PROJECT_DIR$/src/Inventory/SpellsInventory.java" />
+        <option value="$PROJECT_DIR$/src/Inventory/CheckInventory.java" />
       </list>
     </option>
   </component>
@@ -276,6 +337,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="spellsAndSwords" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RPG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Inventory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -343,7 +422,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TrollBattle">
+  <component name="RunManager" selected="Application.CheckInventory">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -446,20 +525,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="TrollBattle" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="battles.TrollBattle" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="RPG" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="BossBattle" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="battles.BossBattle" />
       <option name="VM_PARAMETERS" value="" />
@@ -474,10 +539,39 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <configuration default="false" name="TrollBattle" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="battles.TrollBattle" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RPG" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CheckInventory" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Inventory.CheckInventory" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RPG" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Intro" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TrollBattle" />
-      <item index="2" class="java.lang.String" itemvalue="Application.BossBattle" />
+      <item index="1" class="java.lang.String" itemvalue="Application.BossBattle" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TrollBattle" />
+      <item index="3" class="java.lang.String" itemvalue="Application.CheckInventory" />
     </list>
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
@@ -503,12 +597,12 @@
       <option name="presentableId" value="Default" />
       <updated>1492821025626</updated>
       <workItem from="1492821076793" duration="19000" />
-      <workItem from="1492821108650" duration="23063000" />
+      <workItem from="1492821108650" duration="40819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23082000" />
+    <option name="totallyTimeSpent" value="40838000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -521,6 +615,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="23" width="1376" height="690" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -528,7 +623,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35909823" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35909823" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -552,15 +647,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/functions/Functions.java</url>
-          <line>190</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -639,28 +726,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stats/CharacterStats.java">
+    <entry file="file://$PROJECT_DIR$/src/functions/CharacterInventory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/Battle.java">
+    <entry file="file://$PROJECT_DIR$/src/battles/TrollBattle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state relative-caret-position="267">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/spellsAndSwords/TotalSwords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="e#825#835#1" expanded="true" />
+            <element signature="e#821#903#0" expanded="true" />
+            <element signature="e#821#903#0" expanded="true" />
+            <element signature="e#821#903#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inventory/SwordsInventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1735#1745#1" expanded="true" />
+            <element signature="e#1731#1824#0" expanded="true" />
+            <element signature="e#1731#1824#0" expanded="true" />
+            <element signature="e#1731#1824#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stats/CharacterStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="141" column="9" lean-forward="false" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+        <state relative-caret-position="116">
+          <caret line="91" column="50" lean-forward="true" selection-start-line="91" selection-start-column="50" selection-end-line="91" selection-end-column="50" />
           <folding>
             <element signature="e#554#646#0" expanded="true" />
             <element signature="e#554#646#0" expanded="true" />
@@ -697,7 +819,6 @@
             <element signature="e#5290#5321#0" expanded="true" />
             <element signature="method#magicOrCombat#0;class#Functions#0" expanded="false" />
             <element signature="method#flee#0;class#Functions#0" expanded="false" />
-            <element signature="method#canUseMagic#0;class#Functions#0" expanded="false" />
             <element signature="method#click#0;class#Functions#0" expanded="false" />
             <element signature="e#6731#6755#1" expanded="true" />
             <element signature="method#clearConsole#0;class#Functions#0" expanded="false" />
@@ -705,45 +826,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/CharacterInventory.java">
+    <entry file="file://$PROJECT_DIR$/src/Inventory/SpellsInventory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Inventory/Spells.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Inventory/Swords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/battles/TrollBattle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="53">
+          <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1556#1566#1" expanded="true" />
+            <element signature="e#1552#1674#0" expanded="true" />
+            <element signature="e#1552#1674#0" expanded="true" />
+            <element signature="e#1552#1674#0" expanded="true" />
+            <element signature="e#1762#1772#1" expanded="true" />
+            <element signature="e#1758#1881#0" expanded="true" />
+            <element signature="e#1758#1881#0" expanded="true" />
+            <element signature="e#1758#1881#0" expanded="true" />
+            <element signature="e#2169#2170#0" expanded="true" />
+            <element signature="e#2198#2199#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stats/MonsterStats.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="-40">
           <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inventory/CheckInventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="119" column="51" lean-forward="false" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#1739#1749#1" expanded="true" />
+            <element signature="e#1735#2199#0" expanded="true" />
+            <element signature="e#1735#2199#0" expanded="true" />
+            <element signature="e#1735#2199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spellsAndSwords/TotalSpells.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+          <folding>
+            <element signature="e#230#253#0" expanded="true" />
+            <element signature="e#243#251#0" expanded="true" />
+            <element signature="e#1100#1110#1" expanded="true" />
+            <element signature="e#1096#1202#0" expanded="true" />
+            <element signature="e#1096#1202#0" expanded="true" />
+            <element signature="e#1096#1202#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/Battle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

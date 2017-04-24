@@ -28,7 +28,7 @@ public enum CharacterStats
     public int level9 = 450;
     public int level10 = 750;
 
-    CharacterStats(int Hp, int Mp, int damage, int mDamage, int Speed, int mSpeed, int intelligence, int spell, String name , int magicRest, int meleeRest , int currentXp, String currentLevel, int upgradePoint)
+    CharacterStats(int Hp, int Mp, int damage, int mDamage, int Speed, int mSpeed, int intelligence, int spellcost, String name , int magicRest, int meleeRest , int currentXp, String currentLevel, int upgradePoint)
     {
         cHP = Hp;
         cMP = Mp;
@@ -37,7 +37,7 @@ public enum CharacterStats
         cSpeed = Speed;
         cMSpeed = mSpeed;
         this.intelligence = intelligence;
-        cSpell = spell;
+        cSpell = spellcost;
         cName = name;
         this.magicRest = magicRest;
         this.meleeRest = meleeRest;
