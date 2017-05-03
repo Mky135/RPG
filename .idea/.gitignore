@@ -1,0 +1,20 @@
+*.class
+JDK8/
+
+# Package Files #
+# --- IGNORE --- DO NOT PUT *.jar - Breaks Travis CI
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+*.DS_Store
+
+## Intellij Idea
+.idea/
+build/
+*.eml*
+*.iml*
+*.ipr*
+*.iws*
