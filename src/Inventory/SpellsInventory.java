@@ -1,10 +1,21 @@
 package Inventory;
 
+import com.sun.corba.se.impl.oa.toa.TOA;
 import spellsAndSwords.TotalSpells;
 
 public enum SpellsInventory
 {
-    Spells( TotalSpells.FireSpell.name,"Empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty");
+    Space0(0, "empty", false),
+    Space1(1, TotalSpells.IceSpell.name, true),
+    Space2(2, TotalSpells.DarkSpell.name, false),
+    Space3(3, "empty", false),
+    Space4(4, "empty", false),
+    Space5(5, "empty", false),
+    Space6(6, "empty", false),
+    Space7(7, "empty", false),
+    Space8(8, "empty", false),
+    Space9(9, TotalSpells.FireSpell.name, false);
+    String item;
     String space0;
     String space1;
     String space2;
@@ -15,79 +26,45 @@ public enum SpellsInventory
     String space7;
     String space8;
     String space9;
-
-    SpellsInventory(String item0 ,String item1, String item2, String item3, String item4, String item5, String item6, String item7, String item8, String item9)
+    boolean equiped;
+    SpellsInventory(int x, String item, boolean equiped)
     {
-        space0 = item0;
-        space1 = item1;
-        space2 = item2;
-        space3 = item3;
-        space4 = item4;
-        space5 = item5;
-        space6 = item6;
-        space7 = item7;
-        space8 = item8;
-        space9 = item9;
-    }
-    public static String fromInteger(int x) {
-        switch(x)
-        {
-            case 0:
-                return Spells.space0;
-            case 1:
-                return Spells.space1;
-            case 2:
-                return Spells.space2;
-            case 3:
-                return Spells.space3;
-            case 4:
-                return Spells.space4;
-            case 5:
-                return Spells.space5;
-            case 6:
-                return Spells.space6;
-            case 7:
-                return Spells.space7;
-            case 8:
-                return Spells.space8;
-            case 9:
-                return Spells.space9;
-        }
-        return null;
-    }
-
-
-    public String getAllStrings()
-    {
-        for(int i = 0; i < SpellsInventory.values().length; i++)
-        {
-            return fromInteger(i).toString();
-        }
-        return null;
-    }
-    public static String checkAllSpells()
-    {
-        for(int i = 0; i < TotalSpells.values().length; i++)
-        {
-            return SpellsInventory.fromInteger(i);
-        }
-        return null;
-    }
-    public static String getSpace(int x)
-    {
+        this.item = item;
         if(x == 0)
         {
-            return Spells.space0;
-        }
-        else if(x == 1)
+            space0 = item;
+        } else if(x == 1)
         {
-            return Spells.space1;
+            space1 = item;
+        } else if(x == 2)
+        {
+            space2 = item;
+        } else if(x == 3)
+        {
+            space3 = item;
+        } else if(x == 4)
+        {
+            space4 = item;
+        } else if(x == 5)
+        {
+            space5 = item;
+        } else if(x == 6)
+        {
+            space6 = item;
+        } else if(x == 7)
+        {
+            space7 = item;
+        } else if(x == 8)
+        {
+            space8 = item;
+        } else
+        {
+            space9 = item;
         }
-        return null;
+        this.equiped = equiped;
     }
-
-    public String getSpace0()
+    public static SpellsInventory getSpellInInvetory(int i)
     {
-        return space0;
+        return SpellsInventory.values()[i];
     }
 }

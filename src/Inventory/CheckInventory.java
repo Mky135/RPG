@@ -5,25 +5,24 @@ import spellsAndSwords.TotalSpells;
 import spellsAndSwords.TotalSwords;
 import stats.CharacterStats;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class CheckInventory
 {
-    static ArrayList<String> arraylist = new ArrayList<String>();
+    static InputMismatchException e = new InputMismatchException();
     public static void main(String[] args) throws InterruptedException
     {
+        equipSpell();
 //        tryToEnterInventroy();
-        CheckWhichSpellsAreInInventory();
+//        CheckWhichSpellsAreInInventory();
+//        checkWhichSpellIsEquiped();
 
     }
 
     public static void tryToEnterInventroy() throws InterruptedException
     {
-        while(true)
+        boolean exit = false;
+        while(exit == false)
         {
             try
             {
@@ -46,10 +45,10 @@ public class CheckInventory
                     checkWhichSwordIsEquiped();
                     break;
                 }
-
-
+//
             }
             catch(InputMismatchException e){System.out.print(e);}
+
         }
     }
     public static void CheckWhichSwordsAreInInventory()
@@ -83,59 +82,60 @@ public class CheckInventory
             System.out.println("false");
         }
     }
+    public static void equipSpell()
+    {
+        for(int i = 0; i < SpellsInventory.values().length; i++)
+        {
+            if(SpellsInventory.getSpellInInvetory(i).equiped == true)
+            {
+                for(int x = 0; x < TotalSpells.values().length; x++)
+                {
+                    if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpells(x).name)
+                    {
+                        CharacterStats.Character.Spellcost = TotalSpells.getSpells(x).manaCost;
+                        CharacterStats.Character.cMDamage = TotalSpells.getSpells(x).spellDamage;
+                    }
+                }
+            }
+        }
+    }
     public static void checkWhichSpellIsEquiped()
     {
-        for(int i = 0; i < TotalSpells.values().length;  i++ )
-            if(SpellsInventory.Spells.space0 == TotalSpells.getSpells(i).name)
+
+            for(int i = 0; i < SpellsInventory.values().length; i++)
             {
-                System.out.println(TotalSpells.getSpells(i).name);
-                CharacterStats.Character.cMDamage = TotalSpells.getSpells(i).spellDamage;
-                System.out.println(CharacterStats.Character.cMDamage);
-                break;
+                if(SpellsInventory.getSpellInInvetory(i).equiped == true)
+                {
+                    System.out.println("Spell equiped: " + SpellsInventory.getSpellInInvetory(i).item);
+                    for(int x = 0; x < TotalSpells.values().length; x++)
+                    {
+                        if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpells(x).name)
+                        {
+                            System.out.println("Damage: " + TotalSpells.getSpells(x).spellDamage);
+                            System.out.println("Mana cost: " + TotalSpells.getSpells(x).manaCost);
+                            CharacterStats.Character.cMDamage = TotalSpells.getSpells(x).spellDamage;
+                            CharacterStats.Character.Spellcost = TotalSpells.getSpells(x).manaCost;
+                            break;
+                        }
+                    }
+                }
             }
-            else
-            {
-                System.out.println("false");
-            }
+
     }
      public static void CheckWhichSpellsAreInInventory()
     {
-//        for(int q = 0; q < TotalSpells.values().length; q++)
-//        {
-//            arraylist.add(TotalSpells.getSpells(q).name);
-//        }
-//        System.out.println(arraylist);
-        for(int i = 0; i < 10; i++ )
-        if(isSpellInInventory(i))
-        {
-//            arraylist.remove(i);
 
-//            for(int x = 0; x < TotalSpells.values().length; x++)
-//            {
-            int spell = 0;
-            if(TotalSpells.getSpell(i).spellDamage != 0)
-            {
-
-//                arraylist.remove(x);
-                System.out.println(TotalSpells.checkAllSpells() + ", damage: " + TotalSpells.getSpell(spell).spellDamage + ", mana cost: " + TotalSpells.getSpell(spell).manaCost);
-                spell = spell + 1;
-            }
-            else
-            {
-                System.out.println(TotalSpells.checkAllSpells());
-            }
-//            }
-        }
-        else
+        for(int i = 0; i < 10; i++)
         {
-            System.out.println(SpellsInventory.Spells.getAllStrings());
+            System.out.println("Space " + i + ": " + SpellsInventory.getSpellInInvetory(i).item);
+            for(int x = 0; x < TotalSpells.values().length; x++)
+            {
+                if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpells(x).name)
+                {
+                    System.out.println("Spell damage: " + TotalSpells.getSpells(x).spellDamage + "\nMana cost: " + TotalSpells.getSpells(x).manaCost+"\n");
+                }
+            }
         }
     }
-
-    public static boolean isSpellInInventory(int i)
-    {
-        return SpellsInventory.fromInteger(i).toString() == TotalSpells.checkAllSpells().name;
-    }
-
 
 }

@@ -5,6 +5,7 @@ import java.awt.event.InputEvent;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import Inventory.CheckInventory;
 import stats.CharacterStats;
 import stats.MonsterStats;
 
@@ -14,15 +15,18 @@ public class Functions
     public static String Fight = "FIGHT";
     public static String Magic = "MAGIC";
     public static String Flee = "FLEE";
+    public static String Inventory = "Inventory";
+    public static CheckInventory checkInventory;
 
     static InputMismatchException e = new InputMismatchException();
 
     public static void tryToEnterCombatOption(MonsterStats monster)
     {
+        checkInventory.checkWhichSpellIsEquiped();
         System.out.print("HP: " + CharacterStats.Character.cHP + " Melee damage: " + CharacterStats.Character.cDamage);
         System.out.println(" Mp: " + CharacterStats.Character.cMP + " Magic damage: " + CharacterStats.Character.cMDamage);
         System.out.println(monster + "'s " + "HP: " + monster.mHP + " " + monster.typeOfDamage + " damage: " + monster.mStrength);
-        System.out.println("Enter either: \nFight, Magic, or Flee");
+        System.out.println("Enter either: \nFight, Magic, Flee, or Inventory");
         while (true)
         {
             try
@@ -38,13 +42,17 @@ public class Functions
                 } else if (Choice.toUpperCase().hashCode() == Flee.toUpperCase().hashCode())
                 {
                     break;
-                } else
+                } else if(Choice.toUpperCase().hashCode() == Inventory.toUpperCase().hashCode())
+                {
+                    break;
+                }else
                 {
                     throw e;
                 }
+
             } catch (InputMismatchException e)
             {
-                System.out.println("Please enter either: \n Fight, Magic, or Flee");
+                System.out.println("Please enter either: \nFight, Magic, Flee, or Check Inventory");
             }
         }
 
@@ -89,10 +97,11 @@ public class Functions
 
     public static void Magic(MonsterStats monster) throws InterruptedException
     {
-        if(canUseMagic(CharacterStats.Character.cSpell) == true)
+        if(canUseMagic(CharacterStats.Character.Spellcost) == true)
         {
             try
             {
+                checkInventory.checkWhichSpellIsEquiped();
                 System.out.println("You choice to use magic");
                 System.out.println("MP left: " + CharacterStats.Character.cMP);
                 Thread.sleep(500);
@@ -129,6 +138,11 @@ public class Functions
         }
     }
 
+    public static void checkInventory() throws InterruptedException
+    {
+
+        checkInventory.tryToEnterInventroy();
+    }
     public static void hitMonster(MonsterStats monster, String magicOrCombat)
     {
         monster.mHP = monster.mHP - magicOrCombat(magicOrCombat);
@@ -173,6 +187,7 @@ public class Functions
             return false;
         }
     }
+
 
     public static boolean flee(MonsterStats monster)
     {

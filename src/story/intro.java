@@ -13,11 +13,11 @@ public class intro
     static InputMismatchException e = new InputMismatchException();
     static NullPointerException l = new NullPointerException        /*meme*/                                                                                                                                        ();
 
-    static final boolean DEBUG_MODE = true;
 
     public static void intro()
     {
         tryToEnterName();
+        CharacterStats.Character.cName = CharacterStats.Character.cName.substring(0,1).toUpperCase() + CharacterStats.Character.cName.substring(1).toLowerCase();
         System.out.println("Hello " + CharacterStats.Character.cName);
         System.out.println("Ready to start an adventure?");
         tryToEnterYesOrNo();

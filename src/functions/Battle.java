@@ -1,5 +1,6 @@
 package functions;
 
+import Inventory.CheckInventory;
 import stats.CharacterStats;
 import stats.MonsterStats;
 
@@ -8,42 +9,58 @@ import java.util.Random;
 public class Battle
 {
     static Functions functions;
+    static CheckInventory checkInventory;
 
     public static void battle(MonsterStats monster) throws InterruptedException
     {
         functions.clearConsole();
         Thread.sleep(1000);
+        checkInventory.equipSpell();
+
         while (monster.mHP > 0 && functions.isCharacterDied() != true)
         {
             functions.tryToEnterCombatOption(monster);
             if(CharacterStats.Character.cHP <= 0)
             {
                 functions.hitCharacter(monster);
+                Thread.sleep(2000);
+                functions.clearConsole();
                 break;
             }
             else if (functions.Choice.toUpperCase().hashCode() == functions.Fight.toUpperCase().hashCode())
             {
                 functions.fight(monster);
+                Thread.sleep(2000);
+                functions.clearConsole();
             }
             else if (functions.Choice.toUpperCase().hashCode() == functions.Magic.toUpperCase().hashCode())
             {
                 functions.Magic(monster);
+                Thread.sleep(2000);
+                functions.clearConsole();
             }
             else if (functions.Choice.toUpperCase().hashCode() == functions.Flee.toUpperCase().hashCode())
             {
                 if(functions.flee(monster))
                 {
+                    Thread.sleep(2000);
+                    functions.clearConsole();
                     break;
                 }
             }
-            Thread.sleep(2000);
-            functions.clearConsole();
+            else if(functions.Choice.toUpperCase().hashCode() == functions.Inventory.toUpperCase().hashCode())
+            {
+                functions.checkInventory();
+            }
+
+
 
         }
         if(monster.mHP <= 0)
         {
             System.out.println("You won");
             dropXp(monster);
+            drop$(monster);
         }
 
     }
@@ -59,6 +76,14 @@ public class Battle
         checkIfLevelUp(Xp);
         System.out.println(CharacterStats.Character.cName + "'s level: " + CharacterStats.Character.currentLevel);
 
+    }
+    public static void drop$(MonsterStats monster)
+    {
+        Random random = new Random();
+        int cashDroped = random.nextInt(monster.max$Drop);
+        CharacterStats.Character.money = CharacterStats.Character.money + cashDroped;
+        System.out.println("You gained " + cashDroped + " cash");
+        System.out.println("Your current cash: $" + CharacterStats.Character.money);
     }
     public static void levelUp(int level)
     {

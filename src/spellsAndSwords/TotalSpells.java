@@ -1,6 +1,7 @@
 package spellsAndSwords;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public enum TotalSpells
 {
@@ -35,7 +36,7 @@ public enum TotalSpells
         }
         if(i == 2)
         {
-                return DarkSpell;
+            return DarkSpell;
         }
         return null;
     }
@@ -55,6 +56,16 @@ public enum TotalSpells
             return getSpells(i);
         }
         return null;
+    }
+    public static List<String> getAllSpells()
+    {
+        List<String> spells = new ArrayList<String>();
+
+        for(int i = 0; i < TotalSpells.values().length; i++)
+        {
+            spells.add(getSpell(i).name);
+        }
+        return spells;
     }
     public static TotalSpells getSpell(int i)
     {
