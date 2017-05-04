@@ -150,27 +150,29 @@ public class Functions
     }
     public static void tryToEquip() throws InterruptedException
     {
-        try
+        while(true)
         {
-            System.out.print("Do you either want to equip: Spell or Sword: ");
-            Scanner scanner = new Scanner(System.in);
-            String swordOrSpell = scanner.nextLine();
-            String Spell = "SPELL";
-            String Sword = "SWORD";
-            if(swordOrSpell.toUpperCase().hashCode() == Spell.hashCode())
+            try
             {
-                checkInventory.chooseWhichSpellToEquip();
-            }
-            else if (swordOrSpell.toUpperCase().hashCode() == Sword.hashCode())
-            {
-                checkInventory.chooseWhichSwordToEquip();
-            }
-            else
-            {
-                throw e;
-            }
+                System.out.print("Do you either want to equip: Spell or Sword: ");
+                Scanner scanner = new Scanner(System.in);
+                String swordOrSpell = scanner.nextLine();
+                String Spell = "SPELL";
+                String Sword = "SWORD";
+                if(swordOrSpell.toUpperCase().hashCode() == Spell.hashCode())
+                {
+                    checkInventory.chooseWhichSpellToEquip();
+                    break;
+                } else if(swordOrSpell.toUpperCase().hashCode() == Sword.hashCode())
+                {
+                    checkInventory.chooseWhichSwordToEquip();
+                    break;
+                } else
+                {
+                    throw e;
+                }
+            } catch(InputMismatchException e) {System.out.println("Please enter either Spell or Sword");}
         }
-        catch(InputMismatchException e ){System.out.println("Please enter either Spell or Sword");}
     }
     public static void hitMonster(MonsterStats monster, String magicOrCombat)
     {

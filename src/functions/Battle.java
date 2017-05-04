@@ -15,7 +15,8 @@ public class Battle
     {
         functions.clearConsole();
         Thread.sleep(1000);
-
+        checkInventory.equipSword();
+        checkInventory.equipSpell();
 
         while (monster.mHP > 0 && functions.isCharacterDied() != true)
         {
@@ -51,10 +52,15 @@ public class Battle
             }
             else if(functions.Choice.toUpperCase().hashCode() == functions.Inventory.toUpperCase().hashCode())
             {
+                functions.clearConsole();
+                Thread.sleep(750);
                 functions.checkInventory();
+
             }
             else if(functions.Choice.toUpperCase().hashCode() == functions.Equip.toUpperCase().hashCode())
             {
+                functions.clearConsole();
+                Thread.sleep(750);
                 functions.tryToEquip();
             }
 
@@ -73,7 +79,7 @@ public class Battle
     public static void dropXp(MonsterStats monster)
     {
         Random random = new Random();
-        int Xp = random.nextInt(monster.maxXpDrop);
+        int Xp = random.nextInt(monster.maxXpDrop)+1;
         CharacterStats.Character.currentXp = CharacterStats.Character.currentXp + Xp;
         System.out.println("You gained " + Xp + " Xp");
         int cXP = CharacterStats.Character.currentXp;
@@ -85,7 +91,7 @@ public class Battle
     public static void drop$(MonsterStats monster)
     {
         Random random = new Random();
-        int cashDroped = random.nextInt(monster.max$Drop);
+        int cashDroped = random.nextInt(monster.max$Drop)+1;
         CharacterStats.Character.money = CharacterStats.Character.money + cashDroped;
         System.out.println("You gained " + cashDroped + " cash");
         System.out.println("Your current cash: $" + CharacterStats.Character.money);

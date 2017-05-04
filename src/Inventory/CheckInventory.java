@@ -11,20 +11,26 @@ public class CheckInventory
 {
     public static void main(String[] args) throws InterruptedException
     {
-//        equipSpell();
+        equipSpell();
+        equipSword();
 //        tryToEnterInventroy();
+
 //        CheckWhichSpellsAreInInventory();
-//        checkWhichSpellIsEquiped();
 //        CheckWhichSwordsAreInInventory();
+
+//        checkWhichSpellIsEquiped();
 //        checkWhichSwordIsEquiped();
+
+        chooseWhichSwordToEquip();
         chooseWhichSpellToEquip();
+
 
     }
 
     public static void tryToEnterInventroy() throws InterruptedException
     {
         boolean exit = false;
-        while(!exit)
+        while(true)
         {
             try
             {
@@ -40,17 +46,14 @@ public class CheckInventory
                     CheckWhichSpellsAreInInventory();
                     checkWhichSpellIsEquiped();
                     break;
-                }
-                else if(inventory.toUpperCase().hashCode() == Swords.hashCode())
+                } else if(inventory.toUpperCase().hashCode() == Swords.hashCode())
                 {
                     CheckWhichSwordsAreInInventory();
                     checkWhichSwordIsEquiped();
                     break;
                 }
 //
-            }
-            catch(InputMismatchException e){System.out.print(e);}
-
+            } catch(InputMismatchException e) {System.out.print(e);}
         }
     }
     public static void CheckWhichSwordsAreInInventory()
@@ -207,7 +210,7 @@ public class CheckInventory
                     {
                         if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpell(x).name)
                         {
-                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage +" equipped");
+                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage +" :equipped");
                         }
                     }
                 }
@@ -217,33 +220,35 @@ public class CheckInventory
                     {
                         if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpell(x).name)
                         {
-                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage +" not equipped");
+                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage +" :not equipped");
                         }
                     }
                 }
             }
         }
-        try
-        {
-            System.out.println("Choose spell to equip! ");
-            Scanner scanner = new Scanner(System.in);
-            int choice = scanner.nextInt();
-            for(int i = 0; i < SpellsInventory.values().length; i++)
-            {
-                if(SpellsInventory.getSpellInInvetory(i).equiped == true)
-                {
-                    SpellsInventory.getSpellInInvetory(i).equiped = false;
-                }
-            }
 
-            SpellsInventory.getSpellInInvetory(choice).equiped = true;
-            System.out.println("Spell: " + SpellsInventory.getSpellInInvetory(choice).item + " equipped");
-        }
-        catch(InputMismatchException e) {System.out.println("Please enter the number of the spell you want to equip");}
-        Thread.sleep(1250);
-        Functions.clearConsole();
+            try
+            {
+                System.out.println("Choose spell to equip! ");
+                Scanner scanner = new Scanner(System.in);
+                int choice = scanner.nextInt();
+                for(int i = 0; i < SpellsInventory.values().length; i++)
+                {
+                    if(SpellsInventory.getSpellInInvetory(i).equiped == true)
+                    {
+                        SpellsInventory.getSpellInInvetory(i).equiped = false;
+
+                    }
+                }
+
+                SpellsInventory.getSpellInInvetory(choice).equiped = true;
+                System.out.println("Spell: " + SpellsInventory.getSpellInInvetory(choice).item + " equipped");
+            } catch(InputMismatchException e) {System.out.println("Please enter the number of the spell you want to equip");}
+            Thread.sleep(1500);
+            Functions.clearConsole();
+
     }
-    public static void chooseWhichSwordToEquip()
+    public static void chooseWhichSwordToEquip() throws InterruptedException
     {
         for(int i = 0; i < SwordsInventory.values().length; i++)
         {
@@ -255,39 +260,42 @@ public class CheckInventory
                     {
                         if(SwordsInventory.getSwordInInvetory(i).item == TotalSwords.getSword(x).name)
                         {
-                            System.out.println(SwordsInventory.getSwordInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSwords.getSword(x).swordDamage +" equipped");
+                            System.out.println(SwordsInventory.getSwordInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSwords.getSword(x).swordDamage +" :equipped");
                         }
                     }
                 }
                 else
                 {
-                    for(int x = 0; x < TotalSpells.values().length; x++)
+                    for(int x = 0; x < TotalSwords.values().length; x++)
                     {
-                        if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpell(x).name)
+                        if(SwordsInventory.getSwordInInvetory(i).item == TotalSwords.getSword(x).name)
                         {
-                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage +" not equipped");
+                            System.out.println(SwordsInventory.getSwordInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSwords.getSword(x).swordDamage +" :not equipped");
                         }
                     }
                 }
             }
         }
-        try
-        {
-            System.out.println("Choose spell to equip! ");
-            Scanner scanner = new Scanner(System.in);
-            int choice = scanner.nextInt();
-            for(int i = 0; i < SpellsInventory.values().length; i++)
-            {
-                if(SpellsInventory.getSpellInInvetory(i).equiped == true)
-                {
-                    SpellsInventory.getSpellInInvetory(i).equiped = false;
-                }
-            }
 
-            SpellsInventory.getSpellInInvetory(choice).equiped = true;
-            System.out.println("Spell: " + SpellsInventory.getSpellInInvetory(choice).item + " equipped");
+            try
+            {
+                System.out.println("Choose sword to equip! ");
+                Scanner scanner = new Scanner(System.in);
+                int choice = scanner.nextInt();
+                for(int i = 0; i < SwordsInventory.values().length; i++)
+                {
+                    if(SwordsInventory.getSwordInInvetory(i).equiped == true)
+                    {
+                        SwordsInventory.getSwordInInvetory(i).equiped = false;
+                    }
+                }
+
+                SwordsInventory.getSwordInInvetory(choice).equiped = true;
+                System.out.println("Sword: " + SwordsInventory.getSwordInInvetory(choice).item + " equipped");
+            } catch(InputMismatchException e) {System.out.println("Please enter the number of the sword you want to equip");}
+            Thread.sleep(1500);
+            Functions.clearConsole();
         }
-        catch(InputMismatchException e) {System.out.println("Please enter the number of the spell you want to equip");}
-    }
+
 }
 

@@ -21,23 +21,19 @@ public class intro
         System.out.println("Hello " + CharacterStats.Character.cName);
         System.out.println("Ready to start an adventure?");
         tryToEnterYesOrNo();
-        System.out.println("Great then you are in for a real adventure");
+        System.out.println("Great, then you are in for a real adventure");
         Thread.sleep(1000);
-        System.out.println(" _______  _______  _______ ");
+        System.out.println("██████╗    ██████╗     ██████╗");
         Thread.sleep(250);
-        System.out.println("(  ____ )(  ____ )(  ____ \\");
+        System.out.println("██╔══██╗   ██╔══██╗   ██╔════╝");
         Thread.sleep(250);
-        System.out.println("| (    )|| (    )|| (    \\/");
+        System.out.println("██████╔╝   ██████╔╝   ██║  ███╗");
         Thread.sleep(250);
-        System.out.println("| (____)|| (____)|| |   ");
+        System.out.println("██╔══██╗   ██╔═══╝    ██║   ██║");
         Thread.sleep(250);
-        System.out.println("|     __)|  _____)| | ____");
+        System.out.println("██║  ██║██╗██║     ██╗╚██████╔╝");
         Thread.sleep(250);
-        System.out.println("| (\\ (   | (      | | \\_  )");
-        Thread.sleep(250);
-        System.out.println("| ) \\ \\__| )      | (___) |");
-        Thread.sleep(250);
-        System.out.println("|/   \\__/|/       (_______)");
+        System.out.println("╚═╝  ╚═╝╚═╝╚═╝     ╚═╝ ╚═════╝ ");
         Thread.sleep(2000);
 
     }
