@@ -14,17 +14,35 @@ public class intro
     static NullPointerException l = new NullPointerException        /*meme*/                                                                                                                                        ();
 
 
-    public static void intro()
+    public static void intro() throws InterruptedException
     {
         tryToEnterName();
         CharacterStats.Character.cName = CharacterStats.Character.cName.substring(0,1).toUpperCase() + CharacterStats.Character.cName.substring(1).toLowerCase();
         System.out.println("Hello " + CharacterStats.Character.cName);
         System.out.println("Ready to start an adventure?");
         tryToEnterYesOrNo();
+        System.out.println("Great then you are in for a real adventure");
+        Thread.sleep(1000);
+        System.out.println(" _______  _______  _______ ");
+        Thread.sleep(250);
+        System.out.println("(  ____ )(  ____ )(  ____ \\");
+        Thread.sleep(250);
+        System.out.println("| (    )|| (    )|| (    \\/");
+        Thread.sleep(250);
+        System.out.println("| (____)|| (____)|| |   ");
+        Thread.sleep(250);
+        System.out.println("|     __)|  _____)| | ____");
+        Thread.sleep(250);
+        System.out.println("| (\\ (   | (      | | \\_  )");
+        Thread.sleep(250);
+        System.out.println("| ) \\ \\__| )      | (___) |");
+        Thread.sleep(250);
+        System.out.println("|/   \\__/|/       (_______)");
+        Thread.sleep(2000);
 
     }
 
-    public static void main(String[] args)
+    public static void main(String[] args) throws InterruptedException
     {
         intro();
     }
@@ -52,7 +70,7 @@ public class intro
         String YesOrNoAwnser;
         String yes = "YES";
         String no = "NO";
-        for( ; ; ) //meme
+        for( ; ; ) /*meme*/
         {
             try
             {

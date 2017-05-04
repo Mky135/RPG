@@ -16,17 +16,18 @@ public class Functions
     public static String Magic = "MAGIC";
     public static String Flee = "FLEE";
     public static String Inventory = "Inventory";
+    public static String Equip = "equip";
     public static CheckInventory checkInventory;
 
     static InputMismatchException e = new InputMismatchException();
 
     public static void tryToEnterCombatOption(MonsterStats monster)
     {
-        checkInventory.checkWhichSpellIsEquiped();
+
         System.out.print("HP: " + CharacterStats.Character.cHP + " Melee damage: " + CharacterStats.Character.cDamage);
         System.out.println(" Mp: " + CharacterStats.Character.cMP + " Magic damage: " + CharacterStats.Character.cMDamage);
         System.out.println(monster + "'s " + "HP: " + monster.mHP + " " + monster.typeOfDamage + " damage: " + monster.mStrength);
-        System.out.println("Enter either: \nFight, Magic, Flee, or Inventory");
+        System.out.println("Enter either: \nFight, Magic, Flee, Inventory, or equip");
         while (true)
         {
             try
@@ -45,14 +46,18 @@ public class Functions
                 } else if(Choice.toUpperCase().hashCode() == Inventory.toUpperCase().hashCode())
                 {
                     break;
-                }else
+                }else if(Choice.toUpperCase().hashCode() == Equip.toUpperCase().hashCode())
+                {
+                    break;
+                }
+                else
                 {
                     throw e;
                 }
 
             } catch (InputMismatchException e)
             {
-                System.out.println("Please enter either: \nFight, Magic, Flee, or Check Inventory");
+                System.out.println("Please enter either: \nFight, Magic, Flee, Inventory, or equip");
             }
         }
 
@@ -142,6 +147,30 @@ public class Functions
     {
 
         checkInventory.tryToEnterInventroy();
+    }
+    public static void tryToEquip() throws InterruptedException
+    {
+        try
+        {
+            System.out.print("Do you either want to equip: Spell or Sword: ");
+            Scanner scanner = new Scanner(System.in);
+            String swordOrSpell = scanner.nextLine();
+            String Spell = "SPELL";
+            String Sword = "SWORD";
+            if(swordOrSpell.toUpperCase().hashCode() == Spell.hashCode())
+            {
+                checkInventory.chooseWhichSpellToEquip();
+            }
+            else if (swordOrSpell.toUpperCase().hashCode() == Sword.hashCode())
+            {
+                checkInventory.chooseWhichSwordToEquip();
+            }
+            else
+            {
+                throw e;
+            }
+        }
+        catch(InputMismatchException e ){System.out.println("Please enter either Spell or Sword");}
     }
     public static void hitMonster(MonsterStats monster, String magicOrCombat)
     {

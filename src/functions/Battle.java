@@ -15,10 +15,11 @@ public class Battle
     {
         functions.clearConsole();
         Thread.sleep(1000);
-        checkInventory.equipSpell();
+
 
         while (monster.mHP > 0 && functions.isCharacterDied() != true)
         {
+            checkInventory.returnWhatIsEquiped();
             functions.tryToEnterCombatOption(monster);
             if(CharacterStats.Character.cHP <= 0)
             {
@@ -51,6 +52,10 @@ public class Battle
             else if(functions.Choice.toUpperCase().hashCode() == functions.Inventory.toUpperCase().hashCode())
             {
                 functions.checkInventory();
+            }
+            else if(functions.Choice.toUpperCase().hashCode() == functions.Equip.toUpperCase().hashCode())
+            {
+                functions.tryToEquip();
             }
 
 

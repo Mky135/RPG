@@ -1,11 +1,15 @@
 package spellsAndSwords;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum TotalSwords
 {
+
     LongSword(3, 15, "Long Sword"),
     ShortSword(2, 10, "Short Sword");
 
-
+    ArrayList<String> arraylist = new ArrayList<String>();
     public int swordDamage;
     public int swordCost;
     public String name;
@@ -16,29 +20,27 @@ public enum TotalSwords
         swordCost = cost;
         this.name = name;
     }
-    public static TotalSwords fromInteger(int x) {
-        switch(x) {
-            case 0:
-                return ShortSword;
-            case 1:
-                return LongSword;
-        }
-        return null;
-    }
     public static int returnDamage(int x)
     {
-        if(TotalSwords.fromInteger(x) != null)
+        if(TotalSwords.getSword(x) != null)
         {
-            return TotalSwords.fromInteger(x).swordDamage;
+            return TotalSpells.getSpells(x).spellDamage;
         }
         return 0;
     }
-    public TotalSwords getAllStrings()
+
+    public static List<String> getAllSwords()
     {
-        for(int i = 0; i < 10; i++)
+        List<String> sword = new ArrayList<String>();
+
+        for(int i = 0; i < TotalSwords.values().length; i++)
         {
-            return fromInteger(i);
+            sword.add(getSword(i).name);
         }
-        return null;
+        return sword;
+    }
+    public static TotalSwords getSword(int i)
+    {
+        return TotalSwords.values()[i];
     }
 }

@@ -1,12 +1,21 @@
 package Inventory;
 
-import spellsAndSwords.TotalSwords;
 
-import java.util.stream.Stream;
+import spellsAndSwords.TotalSwords;
 
 public enum SwordsInventory
 {
-    SWORDS(TotalSwords.ShortSword.name, "", "", "", "", "", "", "","", "");
+    Space0(0, "empty", false),
+    Space1(1, TotalSwords.ShortSword.name, true),
+    Space2(2, "empty",false),
+    Space3(3, "empty", false),
+    Space4(4, "empty", false),
+    Space5(5, "empty", false),
+    Space6(6, "empty", false),
+    Space7(7, "empty", false),
+    Space8(8, "empty", false),
+    Space9(9, "empty", false);
+    String item;
     String space0;
     String space1;
     String space2;
@@ -17,59 +26,45 @@ public enum SwordsInventory
     String space7;
     String space8;
     String space9;
-    public static SwordsInventory[] value;
-    public static String blank = "";
-
-    SwordsInventory(String item0 ,String item1, String item2, String item3, String item4, String item5, String item6, String item7, String item8, String item9)
+    boolean equiped;
+    SwordsInventory(int x, String item, boolean equiped)
     {
-        space0 = item0;
-        space1 = item1;
-        space2 = item2;
-        space3 = item3;
-        space4 = item4;
-        space5 = item5;
-        space6 = item6;
-        space7 = item7;
-        space8 = item8;
-        space9 = item9;
-    }
-    public static String fromInteger(int x) {
-        switch(x)
+        this.item = item;
+        if(x == 0)
         {
-            case 0:
-//                if(SWORDS.space0.hashCode() != blank.hashCode())
-//                {
-                    return SWORDS.space0;
-//                }
-            case 1:
-                return SWORDS.space1;
-            case 2:
-                return SWORDS.space2;
-            case 3:
-                return SWORDS.space3;
-            case 4:
-                return SWORDS.space4;
-            case 5:
-                return SWORDS.space5;
-            case 6:
-                return SWORDS.space6;
-            case 7:
-                return SWORDS.space7;
-            case 8:
-                return SWORDS.space8;
-            case 9:
-                return SWORDS.space9;
+            space0 = item;
+        } else if(x == 1)
+        {
+            space1 = item;
+        } else if(x == 2)
+        {
+            space2 = item;
+        } else if(x == 3)
+        {
+            space3 = item;
+        } else if(x == 4)
+        {
+            space4 = item;
+        } else if(x == 5)
+        {
+            space5 = item;
+        } else if(x == 6)
+        {
+            space6 = item;
+        } else if(x == 7)
+        {
+            space7 = item;
+        } else if(x == 8)
+        {
+            space8 = item;
+        } else
+        {
+            space9 = item;
         }
-        return null;
+        this.equiped = equiped;
     }
-
-
-    public String getAllStrings()
+    public static SwordsInventory getSwordInInvetory(int i)
     {
-        for(int i = 0; i < 10; i++)
-        {
-            return fromInteger(i).toString();
-        }
-        return null;
+        return SwordsInventory.values()[i];
     }
 }

@@ -1,0 +1,16 @@
+*.class
+JDK8/
+
+# Package Files #
+*.war
+*.ear
+
+*.DS_Store
+
+## Intellij Idea
+.idea/
+build/
+*.eml*
+*.iml*
+*.ipr*
+*.iws*
