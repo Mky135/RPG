@@ -3,6 +3,7 @@ package stats;
 public enum MonsterStats
 {
     Troll(5, 3, 1, 1 , "Melee" , 10, 20),
+    Goblin(7, 2, 10, 10, "Melee", 15, 30),
     Boss(9999, 1234, 123456, 123456 , "Magic" , 10, 98989898);
 
     public int mHP = 0;
