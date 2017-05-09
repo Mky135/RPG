@@ -16,7 +16,6 @@ public class BossBattle
     {
         MonsterStats monster;
         monster = MonsterStats.Boss;
-        intro.intro();
         battle.battle(monster);
     }
 }

@@ -14,6 +14,9 @@ public class Battle
     public static void battle(MonsterStats monster) throws InterruptedException
     {
         functions.clearConsole();
+        System.out.println("You encounter " + monster);
+        Thread.sleep(750);
+        functions.clearConsole();
         Thread.sleep(1000);
         checkInventory.equipSword();
         checkInventory.equipSpell();
