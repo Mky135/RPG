@@ -13,6 +13,18 @@ public class Battle
 
     public static void battle(MonsterStats monster) throws InterruptedException
     {
+        if(monster == MonsterStats.Goblin)
+        {
+            monster.mHP = 7;
+        }
+        if(monster == MonsterStats.Troll)
+        {
+            monster.mHP = 5;
+        }
+        else if(monster == MonsterStats.Boss)
+        {
+            monster.mHP = 9999;
+        }
         functions.clearConsole();
         System.out.println("You encounter " + monster);
         Thread.sleep(750);

@@ -6,15 +6,15 @@ import spellsAndSwords.TotalSpells;
 public enum SpellsInventory
 {
     Space0(0, "empty", false),
-    Space1(1, TotalSpells.IceSpell.name, true),
-    Space2(2, TotalSpells.DarkSpell.name, false),
+    Space1(1, "empty", false),
+    Space2(2, "empty", false),
     Space3(3, "empty", false),
     Space4(4, "empty", false),
     Space5(5, "empty", false),
     Space6(6, "empty", false),
     Space7(7, "empty", false),
     Space8(8, "empty", false),
-    Space9(9, TotalSpells.FireSpell.name, false);
+    Space9(9, TotalSpells.FireSpell.name, true);
     String item;
     String space0;
     String space1;

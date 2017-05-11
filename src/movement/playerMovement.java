@@ -24,7 +24,7 @@ public class playerMovement
     }
     public static void move() throws InterruptedException
     {
-        while(!pm.reachedGoal())
+        while(!pm.reachedGoal() && CharacterStats.Character.cHP >0)
         {
             tryToMove();
         }
@@ -33,64 +33,69 @@ public class playerMovement
     {
         while(true)
         {
-            try
+            if(CharacterStats.Character.cHP > 0)
             {
-                System.out.println("Enter directions (Left,Right,Forward,Backwards): ");
-                Scanner keyboard = new Scanner(System.in);
-                String input = keyboard.nextLine();
-                if(input.toUpperCase().hashCode() == Forwards.hashCode() || input.toUpperCase().hashCode() == f.hashCode())
+                try
                 {
-                    CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate + 30;
-                    pm.possibleMoves(CharacterStats.Character.Coordinate);
-                    System.out.println(CharacterStats.Character.Coordinate);
-                    if(pm.canPass = false)
-                    {
-                        CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate - 30;
-                        System.out.print(CharacterStats.Character.Coordinate);
-                    }
-                    break;
-                }
-                else if(input.toUpperCase().hashCode() == Backwards.hashCode() || input.toUpperCase().hashCode() == b.hashCode())
-                {
-                    CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate - 30;
-                    pm.possibleMoves(CharacterStats.Character.Coordinate);
-                    System.out.println(CharacterStats.Character.Coordinate);
-                    if(pm.canPass = false)
+                    System.out.println("Enter directions (Left,Right,Forward,Backwards): ");
+                    Scanner keyboard = new Scanner(System.in);
+                    String input = keyboard.nextLine();
+                    if(input.toUpperCase().hashCode() == Forwards.hashCode() || input.toUpperCase().hashCode() == f.hashCode())
                     {
                         CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate + 30;
-                        System.out.print(CharacterStats.Character.Coordinate);
-                    }
-                    break;
-                }
-                else if(input.toUpperCase().hashCode() == Left.hashCode() || input.toUpperCase().hashCode() == l.hashCode())
-                {
-                    CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate - 1;
-                    pm.possibleMoves(CharacterStats.Character.Coordinate);
-                    System.out.println(CharacterStats.Character.Coordinate);
-                    if(pm.canPass = false)
+                        pm.possibleMoves(CharacterStats.Character.Coordinate);
+                        System.out.println(CharacterStats.Character.Coordinate);
+                        if(!pm.canPass)
+                        {
+                            CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate - 30;
+                            System.out.print(CharacterStats.Character.Coordinate);
+                        }
+                        break;
+                    } else if(input.toUpperCase().hashCode() == Backwards.hashCode() || input.toUpperCase().hashCode() == b.hashCode())
                     {
-                        CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate + 1;
-                        System.out.print(CharacterStats.Character.Coordinate);
-                    }
-                    break;
-                }
-                else if(input.toUpperCase().hashCode() == Right.hashCode() || input.toUpperCase().hashCode() == r.hashCode())
-                {
-                    CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate + 1;
-                    pm.possibleMoves(CharacterStats.Character.Coordinate);
-                    System.out.println(CharacterStats.Character.Coordinate);
-                    if(pm.canPass = false)
+                        CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate - 30;
+                        pm.possibleMoves(CharacterStats.Character.Coordinate);
+                        System.out.println(CharacterStats.Character.Coordinate);
+                        if(!pm.canPass)
+                        {
+                            CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate + 30;
+                            System.out.print(CharacterStats.Character.Coordinate);
+                        }
+                        break;
+                    } else if(input.toUpperCase().hashCode() == Left.hashCode() || input.toUpperCase().hashCode() == l.hashCode())
                     {
                         CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate - 1;
-                        System.out.print(CharacterStats.Character.Coordinate);
+                        pm.possibleMoves(CharacterStats.Character.Coordinate);
+                        System.out.println(CharacterStats.Character.Coordinate);
+                        if(!pm.canPass)
+                        {
+                            CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate + 1;
+                            System.out.print(CharacterStats.Character.Coordinate);
+                        }
+                        break;
+                    } else if(input.toUpperCase().hashCode() == Right.hashCode() || input.toUpperCase().hashCode() == r.hashCode())
+                    {
+                        CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate + 1;
+                        pm.possibleMoves(CharacterStats.Character.Coordinate);
+                        System.out.println(CharacterStats.Character.Coordinate);
+                        if(!pm.canPass)
+                        {
+                            CharacterStats.Character.Coordinate = CharacterStats.Character.Coordinate - 1;
+                            System.out.print(CharacterStats.Character.Coordinate);
+                        }
+                        break;
+                    } else
+                    {
+                        throw e;
                     }
-                    break;
-                }
-                else
-                {
-                    throw e;
-                }
-            } catch(NullPointerException x) {System.out.println("Please enter (Left, right, forwards, backwards) or (l,r,f,b)");}
+                } catch(NullPointerException x) {System.out.println("Please enter (Left, right, forwards, backwards) or (l,r,f,b)");}
+            }
+            else
+            {
+                System.out.println("Game over");
+                break;
+            }
         }
+
     }
 }
