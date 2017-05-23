@@ -1,21 +1,21 @@
 package Inventory;
 
+import totalItems.TotalPotions;
 
-import totalItems.TotalSwords;
-
-public enum SwordsInventory
+public enum PotionInventory
 {
-    Space0(0, "empty", false),
-    Space1(1, TotalSwords.ShortSword.name, true),
-    Space2(2, "empty",false),
-    Space3(3, "empty", false),
-    Space4(4, "empty", false),
-    Space5(5, "empty", false),
-    Space6(6, "empty", false),
-    Space7(7, "empty", false),
-    Space8(8, "empty", false),
-    Space9(9, "empty", false);
-    String item;
+    Space0(TotalPotions.simplePotion.name, 0, true),
+    Space1("empty",1,false),
+    Space2("empty",2,false),
+    Space3("empty",3,false),
+    Space4("empty",4,false),
+    Space5("empty",5,false),
+    Space6("empty",6,false),
+    Space7("empty",7,false),
+    Space8("empty",8,false),
+    Space9(TotalPotions.bread.name,9,false);
+
+    public String item;
     String space0;
     String space1;
     String space2;
@@ -26,8 +26,8 @@ public enum SwordsInventory
     String space7;
     String space8;
     String space9;
-    boolean equiped;
-    SwordsInventory(int x, String item, boolean equiped)
+    public boolean equiped;
+    PotionInventory(String item, int x, boolean equiped)
     {
         this.item = item;
         if(x == 0)
@@ -63,8 +63,10 @@ public enum SwordsInventory
         }
         this.equiped = equiped;
     }
-    public static SwordsInventory getSwordInInvetory(int i)
+    public static PotionInventory getPotionInInventory(int i)
     {
-        return SwordsInventory.values()[i];
+        return PotionInventory.values()[i];
     }
+
+
 }

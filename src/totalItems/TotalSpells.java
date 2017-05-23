@@ -1,4 +1,4 @@
-package spellsAndSwords;
+package totalItems;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ public enum TotalSpells
     IceSpell(4,15, "Ice Spell",2),
     DarkSpell(7, 25, "Dark Spell",3);
 
-    ArrayList<String> arraylist = new ArrayList<String>();
+    static String [] arrayList;
     public int spellDamage;
     public int spellCost;
     public int manaCost;
@@ -42,6 +42,7 @@ public enum TotalSpells
     }
     public static int returnDamage(int x)
     {
+
         if(TotalSpells.getSpells(x) != null)
         {
             return TotalSpells.getSpells(x).spellDamage;

@@ -1,7 +1,6 @@
 package Inventory;
 
-import com.sun.corba.se.impl.oa.toa.TOA;
-import spellsAndSwords.TotalSpells;
+import totalItems.TotalSpells;
 
 public enum SpellsInventory
 {

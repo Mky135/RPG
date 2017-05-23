@@ -17,7 +17,7 @@ public class Battle
         {
             monster.mHP = 7;
         }
-        if(monster == MonsterStats.Troll)
+        else if(monster == MonsterStats.Troll)
         {
             monster.mHP = 5;
         }
@@ -32,6 +32,7 @@ public class Battle
         Thread.sleep(1000);
         checkInventory.equipSword();
         checkInventory.equipSpell();
+        checkInventory.equipPotions();
 
         while (monster.mHP > 0 && functions.isCharacterDied() != true)
         {
@@ -44,19 +45,19 @@ public class Battle
                 functions.clearConsole();
                 break;
             }
-            else if (functions.Choice.toUpperCase().hashCode() == functions.Fight.toUpperCase().hashCode())
+            else if (functions.Choice.toUpperCase().hashCode() == functions.Fight.hashCode())
             {
                 functions.fight(monster);
                 Thread.sleep(2000);
                 functions.clearConsole();
             }
-            else if (functions.Choice.toUpperCase().hashCode() == functions.Magic.toUpperCase().hashCode())
+            else if (functions.Choice.toUpperCase().hashCode() == functions.Magic.hashCode())
             {
                 functions.Magic(monster);
                 Thread.sleep(2000);
                 functions.clearConsole();
             }
-            else if (functions.Choice.toUpperCase().hashCode() == functions.Flee.toUpperCase().hashCode())
+            else if (functions.Choice.toUpperCase().hashCode() == functions.Flee.hashCode())
             {
                 if(functions.flee(monster))
                 {
@@ -65,22 +66,25 @@ public class Battle
                     break;
                 }
             }
-            else if(functions.Choice.toUpperCase().hashCode() == functions.Inventory.toUpperCase().hashCode())
+            else if(functions.Choice.toUpperCase().hashCode() == functions.Inventory.hashCode())
             {
                 functions.clearConsole();
                 Thread.sleep(750);
                 functions.checkInventory();
 
             }
-            else if(functions.Choice.toUpperCase().hashCode() == functions.Equip.toUpperCase().hashCode())
+            else if(functions.Choice.toUpperCase().hashCode() == functions.Equip.hashCode())
             {
                 functions.clearConsole();
                 Thread.sleep(750);
                 functions.tryToEquip();
             }
-
-
-
+            else if(functions.Choice.toUpperCase().hashCode() == functions.Potions.hashCode())
+            {
+                functions.clearConsole();
+                Thread.sleep(750);
+                functions.usePotion();
+            }
         }
         if(monster.mHP <= 0)
         {
@@ -117,6 +121,8 @@ public class Battle
         CharacterStats.Character.currentLevel = "Level " + level;
         System.out.println("You gained " + level/2 + " upgrade points");
         CharacterStats.Character.upgradePoint = CharacterStats.Character.upgradePoint + level/2;
+        CharacterStats.Character.MaxHP = CharacterStats.Character.MaxHP*level;
+
     }
     public static void checkIfLevelUp(int XP)
     {

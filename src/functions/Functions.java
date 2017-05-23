@@ -6,18 +6,22 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import Inventory.CheckInventory;
+import Inventory.PotionInventory;
 import stats.CharacterStats;
 import stats.MonsterStats;
+import totalItems.TotalPotions;
 
 public class Functions
 {
-    public static String Choice = "";
-    public static String Fight = "FIGHT";
-    public static String Magic = "MAGIC";
-    public static String Flee = "FLEE";
-    public static String Inventory = "Inventory";
-    public static String Equip = "equip";
-    public static CheckInventory checkInventory;
+     static String Choice = "";
+     static String Fight = "FIGHT".toUpperCase();
+     static String Magic = "MAGIC".toUpperCase();
+     static String Flee = "FLEE".toUpperCase();
+     static String Inventory = "Inventory".toUpperCase();
+     static String Equip = "equip".toUpperCase();
+     static String Potions = "use a Potion".toUpperCase();
+     static CheckInventory checkInventory;
+     static PotionInventory potionInventory;
 
     static InputMismatchException e = new InputMismatchException();
 
@@ -27,7 +31,7 @@ public class Functions
         System.out.print("HP: " + CharacterStats.Character.cHP + " Melee damage: " + CharacterStats.Character.cDamage);
         System.out.println(" Mp: " + CharacterStats.Character.cMP + " Magic damage: " + CharacterStats.Character.cMDamage);
         System.out.println(monster + "'s " + "HP: " + monster.mHP + " " + monster.typeOfDamage + " damage: " + monster.mStrength);
-        System.out.println("Enter either: \nFight, Magic, Flee, Inventory, or equip");
+        System.out.println("Enter either: \nFight, Magic, Flee, Inventory, equip, or use a Potion");
         while (true)
         {
             try
@@ -50,6 +54,10 @@ public class Functions
                 {
                     break;
                 }
+                else if(Choice.toUpperCase().hashCode() == Potions.hashCode())
+                {
+                    break;
+                }
                 else
                 {
                     throw e;
@@ -57,7 +65,7 @@ public class Functions
 
             } catch (InputMismatchException e)
             {
-                System.out.println("Please enter either: \nFight, Magic, Flee, Inventory, or equip");
+                System.out.println("Please enter either: \nFight, Magic, Flee, Inventory, equip, or use a Potion");
             }
         }
 
@@ -100,9 +108,94 @@ public class Functions
         }
     }
 
+    public static void usePotion()
+    {
+        if(CharacterStats.Character.cHP != CharacterStats.Character.MaxHP)
+        {
+            while(true)
+            {
+
+                try
+                {
+
+                    print("How many Potions do you want to use? (You have: " + CharacterStats.Character.amountOfPotions + " potions)");
+
+                    Scanner input = new Scanner(System.in);
+                    int amount = input.nextInt();
+
+                    if(amount <= CharacterStats.Character.amountOfPotions)
+                    {
+                        print("You used a Potion");
+                        for(int i = 0; i <= amount; i++)
+                        {
+                            for(int x = 0; x < PotionInventory.values().length; x++)
+                            {
+                                if(potionInventory.getPotionInInventory(x).equiped)
+                                {
+                                    for(int y = 0; y < TotalPotions.values().length; y++)
+                                    {
+                                        if(potionInventory.getPotionInInventory(x).item == TotalPotions.getPotion(y).name)
+                                        {
+                                            if(CharacterStats.Character.cHP != CharacterStats.Character.MaxHP)
+                                            {
+                                                int health = CharacterStats.Character.cHP;
+                                                if(CharacterStats.Character.amountOfPotions > 0)
+                                                {
+                                                    health  = health + TotalPotions.getPotion(y).totalHealingPower;
+                                                    if(health <= CharacterStats.Character.MaxHP)
+                                                    {
+                                                        print("You gained " + TotalPotions.getPotion(y).totalHealingPower + " health");
+                                                        CharacterStats.Character.cHP = CharacterStats.Character.cHP + TotalPotions.getPotion(y).totalHealingPower;
+                                                        TotalPotions.getPotion(y).amount--;
+                                                        CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(y).amount;
+                                                    }
+                                                    else
+                                                    {
+                                                        int num=0;
+                                                            while(num != CharacterStats.Character.MaxHP - CharacterStats.Character.cHP)
+                                                            {
+                                                                num++;
+                                                            }
+                                                        print("You gained " + num + " health");
+                                                            CharacterStats.Character.cHP = CharacterStats.Character.cHP + num;
+                                                            TotalPotions.getPotion(y).amount--;
+                                                            CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(y).amount;
+                                                    }
+
+                                                } else
+                                                {
+                                                    print("You have no more potions ");
+                                                    break;
+                                                }
+                                            }
+                                            else
+                                            {
+                                                System.out.println("You are at full health");
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                        print("You have " + CharacterStats.Character.amountOfPotions + " left");
+                        print("Health: " + CharacterStats.Character.cHP);
+                        break;
+                    } else
+                    {
+                        print("You can't use that many");
+                    }
+                } catch(InputMismatchException e) {print("Please enter a number: ");}
+            }
+        }else
+        {
+            System.out.println("You are at max HP, can't use any potions");
+        }
+    }
     public static void Magic(MonsterStats monster) throws InterruptedException
     {
-        if(canUseMagic(CharacterStats.Character.Spellcost) == true)
+        if(canUseMagic(CharacterStats.Character.Spellcost))
         {
             try
             {
@@ -148,30 +241,50 @@ public class Functions
 
         checkInventory.tryToEnterInventroy();
     }
+
     public static void tryToEquip() throws InterruptedException
     {
         while(true)
         {
             try
             {
-                System.out.print("Do you either want to equip: Spell or Sword: ");
+                System.out.print("Do you either want to equip: Spell, Sword, or Potions: ");
                 Scanner scanner = new Scanner(System.in);
-                String swordOrSpell = scanner.nextLine();
+                String input = scanner.nextLine();
                 String Spell = "SPELL";
                 String Sword = "SWORD";
-                if(swordOrSpell.toUpperCase().hashCode() == Spell.hashCode())
+                String Potions = "POTIONS";
+                if(input.toUpperCase().hashCode() == Spell.hashCode() || input.toUpperCase().hashCode() == "SP".hashCode())
                 {
                     checkInventory.chooseWhichSpellToEquip();
                     break;
-                } else if(swordOrSpell.toUpperCase().hashCode() == Sword.hashCode())
+                } else if(input.toUpperCase().hashCode() == Sword.hashCode() || input.toUpperCase().hashCode() == "SW".hashCode())
                 {
                     checkInventory.chooseWhichSwordToEquip();
                     break;
-                } else
+                } else if(input.toUpperCase().hashCode() == Potions.hashCode()  || input.toUpperCase().hashCode() == "P".hashCode())
+                {
+                    checkInventory.chooseWhichPotionToEquip();
+                    for(int i=0; i<PotionInventory.values().length; i++)
+                    {
+                        if(PotionInventory.getPotionInInventory(i).equiped)
+                        {
+                            for(int x=0; x<TotalPotions.values().length; x++)
+                            {
+                                if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                                {
+                                    CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(x).amount;
+                                }
+                            }
+                        }
+                    }
+                    break;
+                }
+                else
                 {
                     throw e;
                 }
-            } catch(InputMismatchException e) {System.out.println("Please enter either Spell or Sword");}
+            } catch(InputMismatchException e) {System.out.println("Please enter either Spell, Sword, or Potions");}
         }
     }
     public static void hitMonster(MonsterStats monster, String magicOrCombat)
@@ -209,14 +322,7 @@ public class Functions
     }
     public static boolean isCharacterDied()
     {
-        if(CharacterStats.Character.cHP <= 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (CharacterStats.Character.cHP <= 0);
     }
 
 
@@ -236,14 +342,7 @@ public class Functions
     public static boolean canUseMagic(int spellPower)
     {
         CharacterStats.Character.cMP = CharacterStats.Character.cMP - spellPower;
-        if(CharacterStats.Character.cMP > 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (CharacterStats.Character.cMP > 0);
     }
 
     public static void print(String value)

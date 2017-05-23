@@ -3,8 +3,6 @@ package movement;
 import battles.GoblinBattle;
 import stats.CharacterStats;
 
-import java.util.zip.CRC32;
-
 public class possibleMoves
 {
     static GoblinBattle goblinBattle;
@@ -62,10 +60,10 @@ public class possibleMoves
    }
     public static void possibleMoves(int Coordinate) throws InterruptedException
     {
-//        if(Coordinate == coordinates(4,3) || Coordinate == coordinates(4,4)|| Coordinate == coordinates(3,4) || Coordinate == coordinates(7,5) || Coordinate == coordinates(6,8) || Coordinate == coordinates(2,8))
-//        {
-//            goblinBattle.goblinBattle();
-//        }
+        if(Coordinate == coordinates(4,3) || Coordinate == coordinates(4,4)|| Coordinate == coordinates(3,4) || Coordinate == coordinates(7,5) || Coordinate == coordinates(6,8) || Coordinate == coordinates(2,8))
+        {
+            goblinBattle.goblinBattle();
+        }
         if(Coordinate <= 30 && Coordinate >=1)
         {
             for(int i = 0; i < emptySpaceY1.length; i++)

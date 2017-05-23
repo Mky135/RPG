@@ -1,4 +1,4 @@
-package spellsAndSwords;
+package totalItems;
 
 import java.util.ArrayList;
 import java.util.List;

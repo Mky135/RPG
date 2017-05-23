@@ -1,5 +1,6 @@
 package movement;
 
+import functions.Functions;
 import stats.CharacterStats;
 
 import java.util.InputMismatchException;
@@ -16,6 +17,7 @@ public class playerMovement
     public static final String r = "R";
     public static final String Left = "LEFT";
     public static final String l = "L";
+    static Functions functions;
 
     static possibleMoves pm;
     public static void main(String[] args) throws InterruptedException
@@ -37,7 +39,7 @@ public class playerMovement
             {
                 try
                 {
-                    System.out.println("Enter directions (Left,Right,Forward,Backwards): ");
+                    System.out.println("Enter directions (Left, Right, Forward, Backwards, inventory): ");
                     Scanner keyboard = new Scanner(System.in);
                     String input = keyboard.nextLine();
                     if(input.toUpperCase().hashCode() == Forwards.hashCode() || input.toUpperCase().hashCode() == f.hashCode())
@@ -84,11 +86,50 @@ public class playerMovement
                             System.out.print(CharacterStats.Character.Coordinate);
                         }
                         break;
+                    } else if(input.toUpperCase().hashCode() == "INVENTORY".hashCode() || input.toUpperCase().hashCode()== "I".hashCode())
+                    {
+                        functions.clearConsole();
+                        Thread.sleep(1000);
+                        while(true)
+                        {
+                            try
+                            {
+                                Scanner scanner = new Scanner(System.in);
+                                System.out.println("Do you either want to check inventory, equip, or use a potion");
+                                String answer = scanner.nextLine();
+                                if(answer.toUpperCase().hashCode() == "CHECK".hashCode())
+                                {
+                                    functions.clearConsole();
+                                    Thread.sleep(750);
+                                    functions.checkInventory();
+                                    break;
+                                }
+                                else if(answer.toUpperCase().hashCode() == "EQUIP".hashCode())
+                                {
+                                    functions.clearConsole();
+                                    Thread.sleep(750);
+                                    functions.tryToEquip();
+                                    break;
+                                }
+                                else if(answer.toUpperCase().hashCode() == "USE A POTION".hashCode())
+                                {
+                                    functions.clearConsole();
+                                    Thread.sleep(750);
+                                    functions.usePotion();
+                                    break;
+                                }
+                                else
+                                {
+                                    throw  e;
+                                }
+
+                            } catch(InputMismatchException e){System.out.println("Please enter either: Check, Equip, or Use a potion");}
+                        }
                     } else
                     {
                         throw e;
                     }
-                } catch(NullPointerException x) {System.out.println("Please enter (Left, right, forwards, backwards) or (l,r,f,b)");}
+                } catch(NullPointerException x) {System.out.println("Please enter (Left, right, forwards, backwards) or (l,r,f,b,i)");}
             }
             else
             {

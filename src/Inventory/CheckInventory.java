@@ -1,42 +1,50 @@
 package Inventory;
 
+import com.sun.corba.se.impl.oa.toa.TOA;
 import functions.Functions;
-import spellsAndSwords.TotalSpells;
-import spellsAndSwords.TotalSwords;
+import totalItems.TotalPotions;
+import totalItems.TotalSpells;
+import totalItems.TotalSwords;
 import stats.CharacterStats;
 
 import java.util.*;
 
 public class CheckInventory
 {
+    static InputMismatchException e;
     public static void main(String[] args) throws InterruptedException
     {
-        equipSpell();
-        equipSword();
+//        equipSpell();
+//        equipSword();
 //        tryToEnterInventroy();
 
 //        CheckWhichSpellsAreInInventory();
 //        CheckWhichSwordsAreInInventory();
+//        CheckWhichPotionsAreInventory();
 
 //        checkWhichSpellIsEquiped();
 //        checkWhichSwordIsEquiped();
+//        checkWhichPotionsIsEquiped();
 
-        chooseWhichSwordToEquip();
-        chooseWhichSpellToEquip();
+
+//        chooseWhichSwordToEquip();
+//        chooseWhichSpellToEquip();
+//        chooseWhichPotionToEquip();
 
 
     }
 
     public static void tryToEnterInventroy() throws InterruptedException
     {
-        boolean exit = false;
         while(true)
         {
             try
             {
-                System.out.println("Which inventory do you want to check: Spells or Swords?");
+                System.out.println("Which inventory do you want to check: Spells, Swords, Potions, or Exit");
                 final String Spells = "SPELLS";
                 final String Swords = "SWORDS";
+                String Potions = "POTIONS";
+                String exit = "EXIT";
                 Scanner scanner = new Scanner(System.in);
                 String inventory = scanner.nextLine();
                 Functions.clearConsole();
@@ -52,8 +60,21 @@ public class CheckInventory
                     checkWhichSwordIsEquiped();
                     break;
                 }
+                else if(inventory.toUpperCase().hashCode() == Potions.hashCode())
+                {
+                    CheckWhichPotionsAreInventory();
+                    checkWhichPotionsIsEquiped();
+                }
+                else if(inventory.toUpperCase().hashCode() == exit.hashCode())
+                {
+                    break;
+                }
+                else
+                {
+                    throw e;
+                }
 //
-            } catch(InputMismatchException e) {System.out.print(e);}
+            } catch(InputMismatchException e) {System.out.print("Which inventory do you want to check: Spells, Swords, Potions, or Exit");}
         }
     }
     public static void CheckWhichSwordsAreInInventory()
@@ -68,6 +89,25 @@ public class CheckInventory
         }
 
     }
+    public static void checkWhichPotionsIsEquiped()
+    {
+        for(int i=0; i < PotionInventory.values().length; i++)
+        {
+            if(PotionInventory.getPotionInInventory(i).equiped)
+            {
+                System.out.println("Potion equiped: " + PotionInventory.getPotionInInventory(i).item);
+                for(int x = 0; x < TotalPotions.values().length; x++)
+                {
+                    if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                    {
+                        System.out.println("Healing power: " + TotalPotions.getPotion(x).totalHealingPower);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
     public static void checkWhichSwordIsEquiped()
     {
         for(int i = 0; i < SwordsInventory.values().length; i++)
@@ -103,11 +143,29 @@ public class CheckInventory
             }
         }
     }
+
+    public static void equipPotions()
+    {
+     for(int i=0; i<PotionInventory.values().length; i++)
+     {
+         if(PotionInventory.getPotionInInventory(i).equiped)
+         {
+             for(int x=0; x < TotalPotions.values().length; x++)
+             {
+                 if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                 {
+                     CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(x).amount;
+                 }
+             }
+         }
+     }
+    }
+
     public static void equipSpell()
     {
         for(int i = 0; i < SpellsInventory.values().length; i++)
         {
-            if(SpellsInventory.getSpellInInvetory(i).equiped == true)
+            if(SpellsInventory.getSpellInInvetory(i).equiped)
             {
                 for(int x = 0; x < TotalSpells.values().length; x++)
                 {
@@ -146,7 +204,7 @@ public class CheckInventory
      public static void CheckWhichSpellsAreInInventory()
     {
 
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < SpellsInventory.values().length; i++)
         {
             System.out.println("Space " + i + ": " + SpellsInventory.getSpellInInvetory(i).item);
             for(int x = 0; x < TotalSpells.values().length; x++)
@@ -158,11 +216,26 @@ public class CheckInventory
             }
         }
     }
+
+    public static void CheckWhichPotionsAreInventory()
+    {
+        for(int i = 0; i < PotionInventory.values().length-1; i++)
+        {
+            System.out.println("Space " + i + ": " + SpellsInventory.getSpellInInvetory(i).item);
+            for(int x = 0; x < TotalPotions.values().length; x++)
+            {
+                if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                {
+                    System.out.println("Potion healing: " + TotalPotions.getPotion(i).totalHealingPower + "\nPotion amount: " + TotalPotions.getPotion(i).amount+"\n");
+                }
+            }
+        }
+    }
     public static TotalSpells returnSpellEquiped()
     {
         for(int i = 0; i < SpellsInventory.values().length; i++)
         {
-            if(SpellsInventory.getSpellInInvetory(i).equiped == true)
+            if(SpellsInventory.getSpellInInvetory(i).equiped)
             {
                 for(int x = 0; x < TotalSpells.values().length; x++)
                 {
@@ -175,6 +248,24 @@ public class CheckInventory
         }
         return null;
     }
+    public static TotalPotions returnPotionEquiped()
+    {
+        for(int i = 0; i < PotionInventory.values().length; i++)
+        {
+            if(PotionInventory.getPotionInInventory(i).equiped)
+            {
+                for(int x = 0; x < TotalPotions.values().length; x++)
+                {
+                    if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                    {
+                        return TotalPotions.getPotion(x);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
     public static TotalSwords returnSwordEquiped()
     {
         for(int i = 0; i<TotalSwords.values().length; i++)
@@ -210,43 +301,22 @@ public class CheckInventory
                     {
                         if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpell(x).name)
                         {
-                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage +" :equipped");
+                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage + " :equipped");
                         }
                     }
-                }
-                else
+                } else
                 {
                     for(int x = 0; x < TotalSpells.values().length; x++)
                     {
                         if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpell(x).name)
                         {
-                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage +" :not equipped");
+                            System.out.println(SpellsInventory.getSpellInInvetory(i).item + "(" + i + ")" + " Damage: " + TotalSpells.getSpell(x).spellDamage + " :not equipped");
                         }
                     }
                 }
             }
         }
-
-            try
-            {
-                System.out.println("Choose spell to equip! ");
-                Scanner scanner = new Scanner(System.in);
-                int choice = scanner.nextInt();
-                for(int i = 0; i < SpellsInventory.values().length; i++)
-                {
-                    if(SpellsInventory.getSpellInInvetory(i).equiped == true)
-                    {
-                        SpellsInventory.getSpellInInvetory(i).equiped = false;
-
-                    }
-                }
-
-                SpellsInventory.getSpellInInvetory(choice).equiped = true;
-                System.out.println("Spell: " + SpellsInventory.getSpellInInvetory(choice).item + " equipped");
-            } catch(InputMismatchException e) {System.out.println("Please enter the number of the spell you want to equip");}
-            Thread.sleep(1500);
-            Functions.clearConsole();
-
+        tryToEquipItem("spell");
     }
     public static void chooseWhichSwordToEquip() throws InterruptedException
     {
@@ -276,26 +346,87 @@ public class CheckInventory
                 }
             }
         }
+         tryToEquipItem("sword");
 
-            try
+        }
+    public static void chooseWhichPotionToEquip() throws InterruptedException
+    {
+        for(int i = 0; i < PotionInventory.values().length; i++)
+        {
+            if(PotionInventory.getPotionInInventory(i).item != "empty")
             {
-                System.out.println("Choose sword to equip! ");
-                Scanner scanner = new Scanner(System.in);
-                int choice = scanner.nextInt();
+                if(PotionInventory.getPotionInInventory(i).equiped)
+                {
+                    for(int x = 0; x < TotalPotions.values().length; x++)
+                    {
+                        if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                        {
+                            System.out.println(PotionInventory.getPotionInInventory(i).item + "(" + i + ")" + " Healing power: " + TotalPotions.getPotion(x).totalHealingPower + " Amount: " + TotalPotions.getPotion(x).amount +" :equipped");
+                        }
+                    }
+                }
+                else
+                {
+                    for(int x = 0; x < TotalPotions.values().length; x++)
+                    {
+                        if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                        {
+                            System.out.println(PotionInventory.getPotionInInventory(i).item + "(" + i + ")" + " Healing power: " + TotalPotions.getPotion(x).totalHealingPower +" Amount: " + TotalPotions.getPotion(x).amount +" :not equipped");
+                        }
+                    }
+                }
+            }
+        }
+        tryToEquipItem("potion");
+    }
+
+    public static void tryToEquipItem(String item) throws InterruptedException
+    {
+        try
+        {
+            System.out.println("Choose " + item  + " to equip! ");
+            Scanner scanner = new Scanner(System.in);
+            int choice = scanner.nextInt();
+            if(item == "sword")
+            {
                 for(int i = 0; i < SwordsInventory.values().length; i++)
                 {
                     if(SwordsInventory.getSwordInInvetory(i).equiped == true)
                     {
                         SwordsInventory.getSwordInInvetory(i).equiped = false;
                     }
+                } SwordsInventory.getSwordInInvetory(choice).equiped = true;
+                System.out.println("Sword: " + SwordsInventory.getSwordInInvetory(choice).item + " equipped");
+
+            }
+            else if(item == "potion")
+            {
+                for(int i = 0; i < PotionInventory.values().length; i++)
+                {
+                    if(PotionInventory.getPotionInInventory(i).equiped)
+                    {
+                        PotionInventory.getPotionInInventory(i).equiped = false;
+                    }
+                } PotionInventory.getPotionInInventory(choice).equiped = true;
+                System.out.println("Potion: " + PotionInventory.getPotionInInventory(choice).item + " equipped");
+            }
+            else
+            {
+                for(int i = 0; i < SpellsInventory.values().length; i++)
+                {
+                    if(SpellsInventory.getSpellInInvetory(i).equiped == true)
+                    {
+                        SpellsInventory.getSpellInInvetory(i).equiped = false;
+
+                    }
                 }
 
-                SwordsInventory.getSwordInInvetory(choice).equiped = true;
-                System.out.println("Sword: " + SwordsInventory.getSwordInInvetory(choice).item + " equipped");
-            } catch(InputMismatchException e) {System.out.println("Please enter the number of the sword you want to equip");}
-            Thread.sleep(1500);
-            Functions.clearConsole();
-        }
-
+                SpellsInventory.getSpellInInvetory(choice).equiped = true;
+                System.out.println("Spell: " + SpellsInventory.getSpellInInvetory(choice).item + " equipped");
+            }
+        } catch(InputMismatchException e) {System.out.println("Please enter the number of the " + item + " you want to equip");}
+        Thread.sleep(1500);
+        Functions.clearConsole();
+    }
 }
 
