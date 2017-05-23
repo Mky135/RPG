@@ -3,6 +3,10 @@ package movement;
 import battles.GoblinBattle;
 import stats.CharacterStats;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class possibleMoves
 {
     static GoblinBattle goblinBattle;
@@ -41,13 +45,15 @@ public class possibleMoves
            return false;
        }
    }
+    static List<Integer> yList = new ArrayList<Integer>();
+    static List<Integer> xList = new ArrayList<Integer>();
 
     /**
      * @param y == row
      * @param x == columns
      * @return
      */
-   public static int coordinates(int y, int x)
+   public static int coordinates(int x, int y)
    {
        if(y == 1)
        {
@@ -60,10 +66,30 @@ public class possibleMoves
    }
     public static void possibleMoves(int Coordinate) throws InterruptedException
     {
-        if(Coordinate == coordinates(4,3) || Coordinate == coordinates(4,4)|| Coordinate == coordinates(3,4) || Coordinate == coordinates(7,5) || Coordinate == coordinates(6,8) || Coordinate == coordinates(2,8))
+        Random random = new Random();
+        int times = random.nextInt(10)+20;
+        for(int x=0; x < times; x++)
         {
-            goblinBattle.goblinBattle();
+//            if(Coordinate == coordinates(3, 4) || Coordinate == coordinates(4, 4) || Coordinate == coordinates(4, 3) || Coordinate == coordinates(5, 7) || Coordinate == coordinates(8, 6) || Coordinate == coordinates(8, 2))
+//            {
+            Random xCor = new Random();
+            Random yCor = new Random();
+             int xCorrdinate = xCor.nextInt(10)+1;
+             int yCorrdinate = yCor.nextInt(10)+1;
+             xList.add(xCorrdinate);
+             yList.add(yCorrdinate);
+//            }
         }
+
+        for(int x=0, y=0; x<xList.size()&& y<yList.size(); x++, y++)
+        {
+            if(Coordinate == coordinates(xList.indexOf(x), yList.indexOf(y)))
+            {
+                goblinBattle.goblinBattle();
+            }
+        }
+
+
         if(Coordinate <= 30 && Coordinate >=1)
         {
             for(int i = 0; i < emptySpaceY1.length; i++)

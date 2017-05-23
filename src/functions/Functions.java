@@ -363,7 +363,7 @@ public class Functions
         System.out.print("\033[H\033[2J");
         try
         {
-            click(43, 640);
+            click(43, 690);
         } catch(AWTException e1)
         {
             e1.printStackTrace();

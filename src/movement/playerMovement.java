@@ -111,7 +111,7 @@ public class playerMovement
                                     functions.tryToEquip();
                                     break;
                                 }
-                                else if(answer.toUpperCase().hashCode() == "USE A POTION".hashCode())
+                                else if(answer.toUpperCase().hashCode() == "USE A POTION".hashCode() || answer.toUpperCase().hashCode() == "I".hashCode())
                                 {
                                     functions.clearConsole();
                                     Thread.sleep(750);
