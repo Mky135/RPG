@@ -156,7 +156,7 @@ public class Functions
                                                             {
                                                                 num++;
                                                             }
-                                                        print("You gained " + num + " health");
+                                                            print("You gained " + num + " health");
                                                             CharacterStats.Character.cHP = CharacterStats.Character.cHP + num;
                                                             TotalPotions.getPotion(y).amount--;
                                                             CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(y).amount;

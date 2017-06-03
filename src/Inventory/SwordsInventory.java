@@ -15,17 +15,17 @@ public enum SwordsInventory
     Space7(7, "empty", false),
     Space8(8, "empty", false),
     Space9(9, "empty", false);
-    String item;
-    String space0;
-    String space1;
-    String space2;
-    String space3;
-    String space4;
-    String space5;
-    String space6;
-    String space7;
-    String space8;
-    String space9;
+    public String item;
+    public String space0;
+    public String space1;
+    public String space2;
+    public String space3;
+    public String space4;
+    public String space5;
+    public String space6;
+    public String space7;
+    public String space8;
+    public String space9;
     boolean equiped;
     SwordsInventory(int x, String item, boolean equiped)
     {

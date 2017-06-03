@@ -2,7 +2,7 @@ package stats;
 
 public enum CharacterStats
 {
-    Character(10, 5, 2, 3, 2, 1, 2, 1, "" , 0, 0, 0, "Level 1", 0,0, 2, 10, 10);
+    Character(10, 5, 2, 3, 2, 1, 2, 1, "" , 0, 0, 0, "Level 1", 0,50, 2, 10, 10);
     public int cHP = 0;
     public int cMP = 0;
     public int cMDamage = 0;

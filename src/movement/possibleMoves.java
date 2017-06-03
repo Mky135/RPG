@@ -68,25 +68,29 @@ public class possibleMoves
     {
         Random random = new Random();
         int times = random.nextInt(10)+20;
-        for(int x=0; x < times; x++)
-        {
-//            if(Coordinate == coordinates(3, 4) || Coordinate == coordinates(4, 4) || Coordinate == coordinates(4, 3) || Coordinate == coordinates(5, 7) || Coordinate == coordinates(8, 6) || Coordinate == coordinates(8, 2))
-//            {
-            Random xCor = new Random();
-            Random yCor = new Random();
-             int xCorrdinate = xCor.nextInt(10)+1;
-             int yCorrdinate = yCor.nextInt(10)+1;
-             xList.add(xCorrdinate);
-             yList.add(yCorrdinate);
-//            }
-        }
-
-        for(int x=0, y=0; x<xList.size()&& y<yList.size(); x++, y++)
-        {
-            if(Coordinate == coordinates(xList.indexOf(x), yList.indexOf(y)))
+//        for(int x=0; x < times; x++)
+//        {
+            if(Coordinate == coordinates(3, 4) || Coordinate == coordinates(4, 4) || Coordinate == coordinates(4, 3) || Coordinate == coordinates(5, 7) || Coordinate == coordinates(8, 6) || Coordinate == coordinates(8, 2))
             {
+//            Random xCor = new Random();
+//            Random yCor = new Random();
+//             int xCorrdinate = xCor.nextInt(10)+1;
+//             int yCorrdinate = yCor.nextInt(10)+1;
+//             xList.add(xCorrdinate);
+//             yList.add(yCorrdinate);
+//            }
+//        }
+
+//        for(int x=0, y=0; x<xList.size()&& y<yList.size(); x++, y++)
+//        {
+//            if(Coordinate == coordinates(xList.indexOf(x), yList.indexOf(y)))
+//            {
                 goblinBattle.goblinBattle();
             }
+//        }
+        if(Coordinate == coordinates(5,4))
+        {
+            System.out.println("You found a merchant");
         }
 
 
