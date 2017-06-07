@@ -83,7 +83,7 @@ public class Battle
             {
                 functions.clearConsole();
                 Thread.sleep(750);
-                functions.usePotion();
+                functions.tryToEnterPotionInventory();
             }
         }
         if(monster.mHP <= 0)

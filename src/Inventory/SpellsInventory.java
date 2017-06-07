@@ -14,7 +14,7 @@ public enum SpellsInventory
     Space7(7, "empty", false),
     Space8(8, "empty", false),
     Space9(9, TotalSpells.FireSpell.name, true);
-    String item;
+    public String item;
     String space0;
     String space1;
     String space2;

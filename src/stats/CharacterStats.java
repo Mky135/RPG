@@ -2,7 +2,7 @@ package stats;
 
 public enum CharacterStats
 {
-    Character(10, 5, 2, 3, 2, 1, 2, 1, "" , 0, 0, 0, "Level 1", 0,50, 2, 10, 10);
+    Character(10, 5, 2, 3, 2, 1, 2, 1, "" , 0, 0, 0, "Level 1", 0,50, 2, 10,10, 10,5);
     public int cHP = 0;
     public int cMP = 0;
     public int cMDamage = 0;
@@ -18,8 +18,10 @@ public enum CharacterStats
     public String currentLevel = "Level 1";
     public int upgradePoint;
     public int money;
-    public int amountOfPotions = 0;
+    public int amountOfHealingPotions = 0;
+    public int amountOfMpPotions = 0;
     public int MaxHP = 0;
+    public int MaxMP = 0;
 
     public int level1 = 10; //Xp need to pass the level
     public int level2 = 25;
@@ -35,7 +37,7 @@ public enum CharacterStats
     public int Coordinate = 0;
 
 
-    CharacterStats(int Hp, int Mp, int damage, int mDamage, int Speed, int mSpeed, int intelligence, int spellcost, String name , int magicRest, int meleeRest , int currentXp, String currentLevel, int upgradePoint, int money, int Coordinate, int amountOfPotions, int maxHP)
+    CharacterStats(int Hp, int Mp, int damage, int mDamage, int Speed, int mSpeed, int intelligence, int spellcost, String name , int magicRest, int meleeRest , int currentXp, String currentLevel, int upgradePoint, int money, int Coordinate, int amountOfHealingPotions, int amountOfMpPotions, int maxHP, int maxMP)
     {
         cHP = Hp;
         cMP = Mp;
@@ -53,7 +55,9 @@ public enum CharacterStats
         this.upgradePoint = upgradePoint;
         this.money = money;
         this.Coordinate = Coordinate;
-        this.amountOfPotions = amountOfPotions;
+        this.amountOfHealingPotions = amountOfHealingPotions;
+        this.amountOfMpPotions = amountOfMpPotions;
         this.MaxHP = maxHP;
+        this.MaxMP = maxMP;
     }
 }

@@ -1,8 +1,7 @@
 package Inventory;
 
-import com.sun.corba.se.impl.oa.toa.TOA;
 import functions.Functions;
-import totalItems.TotalPotions;
+import totalItems.TotalHealingPotions;
 import totalItems.TotalSpells;
 import totalItems.TotalSwords;
 import stats.CharacterStats;
@@ -20,7 +19,7 @@ public class CheckInventory
 
 //        CheckWhichSpellsAreInInventory();
 //        CheckWhichSwordsAreInInventory();
-//        CheckWhichPotionsAreInventory();
+        CheckWhichPotionsAreInventory();
 
 //        checkWhichSpellIsEquiped();
 //        checkWhichSwordIsEquiped();
@@ -77,30 +76,19 @@ public class CheckInventory
             } catch(InputMismatchException e) {System.out.print("Which inventory do you want to check: Spells, Swords, Potions, or Exit");}
         }
     }
-    public static void CheckWhichSwordsAreInInventory()
-    {
-        for(int i = 0; i < 10; i++)
-        {
-            System.out.println("Space " + i + ": " + SwordsInventory.getSwordInInvetory(i).item);
-            for(int x = 0; x < TotalSwords.values().length; x++)
-            {
-                if(SwordsInventory.getSwordInInvetory(i).item== TotalSwords.getSword(x).name) { System.out.println("Sword damage: " + TotalSwords.getSword(x).swordDamage); }
-            }
-        }
 
-    }
     public static void checkWhichPotionsIsEquiped()
     {
         for(int i=0; i < PotionInventory.values().length; i++)
         {
-            if(PotionInventory.getPotionInInventory(i).equiped)
+            if(PotionInventory.getPotionInInventory(i).equipped)
             {
-                System.out.println("Potion equiped: " + PotionInventory.getPotionInInventory(i).item);
-                for(int x = 0; x < TotalPotions.values().length; x++)
+                System.out.println("Potion equipped: " + PotionInventory.getPotionInInventory(i).item);
+                for(int x = 0; x < TotalHealingPotions.values().length; x++)
                 {
-                    if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                    if(PotionInventory.getPotionInInventory(i).item == TotalHealingPotions.getPotion(x).name)
                     {
-                        System.out.println("Healing power: " + TotalPotions.getPotion(x).totalHealingPower);
+                        System.out.println("Healing power: " + TotalHealingPotions.getPotion(x).totalHealingPower);
                         break;
                     }
                 }
@@ -114,7 +102,7 @@ public class CheckInventory
         {
             if(SwordsInventory.getSwordInInvetory(i).equiped)
             {
-                System.out.println("Sword equiped: " + SwordsInventory.getSwordInInvetory(i).item);
+                System.out.println("Sword equipped: " + SwordsInventory.getSwordInInvetory(i).item);
                 for(int x = 0; x < TotalSwords.values().length; x++)
                 {
                     if(SwordsInventory.getSwordInInvetory(i).item == TotalSwords.getSword(x).name)
@@ -148,13 +136,13 @@ public class CheckInventory
     {
      for(int i=0; i<PotionInventory.values().length; i++)
      {
-         if(PotionInventory.getPotionInInventory(i).equiped)
+         if(PotionInventory.getPotionInInventory(i).equipped)
          {
-             for(int x=0; x < TotalPotions.values().length; x++)
+             for(int x = 0; x < TotalHealingPotions.values().length; x++)
              {
-                 if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                 if(PotionInventory.getPotionInInventory(i).item == TotalHealingPotions.getPotion(x).name)
                  {
-                     CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(x).amount;
+                     CharacterStats.Character.amountOfPotions = TotalHealingPotions.getPotion(x).amount;
                  }
              }
          }
@@ -185,7 +173,7 @@ public class CheckInventory
             {
                 if(SpellsInventory.getSpellInInvetory(i).equiped)
                 {
-                    System.out.println("Spell equiped: " + SpellsInventory.getSpellInInvetory(i).item);
+                    System.out.println("Spell equipped: " + SpellsInventory.getSpellInInvetory(i).item);
                     for(int x = 0; x < TotalSpells.values().length; x++)
                     {
                         if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpells(x).name)
@@ -206,27 +194,44 @@ public class CheckInventory
 
         for(int i = 0; i < SpellsInventory.values().length; i++)
         {
-            System.out.println("Space " + i + ": " + SpellsInventory.getSpellInInvetory(i).item);
-            for(int x = 0; x < TotalSpells.values().length; x++)
+            if(!SpellsInventory.getSpellInInvetory(i).item.equals("empty"))
             {
-                if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpells(x).name)
+                System.out.println("Space " + i + ": " + SpellsInventory.getSpellInInvetory(i).item);
+                for(int x = 0; x < TotalSpells.values().length; x++)
                 {
-                    System.out.println("Spell damage: " + TotalSpells.getSpells(x).spellDamage + "\nMana cost: " + TotalSpells.getSpells(x).manaCost+"\n");
+                    if(SpellsInventory.getSpellInInvetory(i).item == TotalSpells.getSpells(x).name)
+                    {
+                        System.out.println("Spell damage: " + TotalSpells.getSpells(x).spellDamage + "\nMana cost: " + TotalSpells.getSpells(x).manaCost + "\n");
+                    }
                 }
             }
         }
     }
 
+    public static void CheckWhichSwordsAreInInventory()
+    {
+        for(int i = 0; i < 10; i++)
+        {
+            if(!SwordsInventory.getSwordInInvetory(i).item.equals("empty"))
+            {
+                System.out.println("Space " + i + ": " + SwordsInventory.getSwordInInvetory(i).item);
+                for(int x = 0; x < TotalSwords.values().length; x++)
+                {
+                    if(SwordsInventory.getSwordInInvetory(i).item == TotalSwords.getSword(x).name) { System.out.println("Sword damage: " + TotalSwords.getSword(x).swordDamage); }
+                }
+            }
+        }
+    }
     public static void CheckWhichPotionsAreInventory()
     {
-        for(int i = 0; i < PotionInventory.values().length-1; i++)
+        for(int i = 0; i < 10; i++)
         {
-            System.out.println("Space " + i + ": " + SpellsInventory.getSpellInInvetory(i).item);
-            for(int x = 0; x < TotalPotions.values().length; x++)
+            if(!PotionInventory.getPotionInInventory(i).item.equals("empty"))
             {
-                if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                System.out.println("Space " + i + ": " + PotionInventory.getPotionInInventory(i).item);
+                for(int x = 0; x < TotalHealingPotions.values().length; x++)
                 {
-                    System.out.println("Potion healing: " + TotalPotions.getPotion(i).totalHealingPower + "\nPotion amount: " + TotalPotions.getPotion(i).amount+"\n");
+                    if(PotionInventory.getPotionInInventory(i).item == TotalHealingPotions.getPotion(x).name) { System.out.println("Healing power: " + TotalHealingPotions.getPotion(x).totalHealingPower + "\nPotions amount: " + TotalHealingPotions.getPotion(x).amount + "\n"); }
                 }
             }
         }
@@ -248,17 +253,17 @@ public class CheckInventory
         }
         return null;
     }
-    public static TotalPotions returnPotionEquiped()
+    public static TotalHealingPotions returnPotionEquiped()
     {
         for(int i = 0; i < PotionInventory.values().length; i++)
         {
-            if(PotionInventory.getPotionInInventory(i).equiped)
+            if(PotionInventory.getPotionInInventory(i).equipped)
             {
-                for(int x = 0; x < TotalPotions.values().length; x++)
+                for(int x = 0; x < TotalHealingPotions.values().length; x++)
                 {
-                    if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                    if(PotionInventory.getPotionInInventory(i).item == TotalHealingPotions.getPotion(x).name)
                     {
-                        return TotalPotions.getPotion(x);
+                        return TotalHealingPotions.getPotion(x);
                     }
                 }
             }
@@ -285,7 +290,7 @@ public class CheckInventory
     }
     public static void returnWhatIsEquiped()
     {
-        System.out.println("Spell equiped: " + returnSpellEquiped().name + " | Sword equiped: " + returnSwordEquiped().name);
+        System.out.println("Spell equipped: " + returnSpellEquiped().name + " | Sword equipped: " + returnSwordEquiped().name);
         System.out.println("Spell damage: " + returnSpellEquiped().spellDamage + " | Sword damage: " + returnSwordEquiped().swordDamage);
         System.out.println("Mana cost: " + returnSpellEquiped().manaCost);
     }
@@ -355,23 +360,23 @@ public class CheckInventory
         {
             if(PotionInventory.getPotionInInventory(i).item != "empty")
             {
-                if(PotionInventory.getPotionInInventory(i).equiped)
+                if(PotionInventory.getPotionInInventory(i).equipped)
                 {
-                    for(int x = 0; x < TotalPotions.values().length; x++)
+                    for(int x = 0; x < TotalHealingPotions.values().length; x++)
                     {
-                        if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                        if(PotionInventory.getPotionInInventory(i).item == TotalHealingPotions.getPotion(x).name)
                         {
-                            System.out.println(PotionInventory.getPotionInInventory(i).item + "(" + i + ")" + " Healing power: " + TotalPotions.getPotion(x).totalHealingPower + " Amount: " + TotalPotions.getPotion(x).amount +" :equipped");
+                            System.out.println(PotionInventory.getPotionInInventory(i).item + "(" + i + ")" + " Healing power: " + TotalHealingPotions.getPotion(x).totalHealingPower + " Amount: " + TotalHealingPotions.getPotion(x).amount + " :equipped");
                         }
                     }
                 }
                 else
                 {
-                    for(int x = 0; x < TotalPotions.values().length; x++)
+                    for(int x = 0; x < TotalHealingPotions.values().length; x++)
                     {
-                        if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                        if(PotionInventory.getPotionInInventory(i).item == TotalHealingPotions.getPotion(x).name)
                         {
-                            System.out.println(PotionInventory.getPotionInInventory(i).item + "(" + i + ")" + " Healing power: " + TotalPotions.getPotion(x).totalHealingPower +" Amount: " + TotalPotions.getPotion(x).amount +" :not equipped");
+                            System.out.println(PotionInventory.getPotionInInventory(i).item + "(" + i + ")" + " Healing power: " + TotalHealingPotions.getPotion(x).totalHealingPower + " Amount: " + TotalHealingPotions.getPotion(x).amount + " :not equipped");
                         }
                     }
                 }
@@ -403,11 +408,11 @@ public class CheckInventory
             {
                 for(int i = 0; i < PotionInventory.values().length; i++)
                 {
-                    if(PotionInventory.getPotionInInventory(i).equiped)
+                    if(PotionInventory.getPotionInInventory(i).equipped)
                     {
-                        PotionInventory.getPotionInInventory(i).equiped = false;
+                        PotionInventory.getPotionInInventory(i).equipped = false;
                     }
-                } PotionInventory.getPotionInInventory(choice).equiped = true;
+                } PotionInventory.getPotionInInventory(choice).equipped = true;
                 System.out.println("Potion: " + PotionInventory.getPotionInInventory(choice).item + " equipped");
             }
             else

@@ -1,6 +1,7 @@
 package movement;
 
 import battles.GoblinBattle;
+import functions.Merchant;
 import stats.CharacterStats;
 
 import java.util.ArrayList;
@@ -91,6 +92,7 @@ public class possibleMoves
         if(Coordinate == coordinates(5,4))
         {
             System.out.println("You found a merchant");
+            Merchant.tryToEnterStore();
         }
 
 

@@ -9,7 +9,7 @@ import Inventory.CheckInventory;
 import Inventory.PotionInventory;
 import stats.CharacterStats;
 import stats.MonsterStats;
-import totalItems.TotalPotions;
+import totalItems.TotalHealingPotions;
 
 public class Functions
 {
@@ -38,19 +38,19 @@ public class Functions
             {
                 Scanner scanner = new Scanner(System.in);
                 Choice = scanner.nextLine();
-                if (Choice.toUpperCase().hashCode() == Fight.toUpperCase().hashCode())
+                if (Choice.toUpperCase().hashCode() == Fight.hashCode())
                 {
                     break;
-                } else if (Choice.toUpperCase().hashCode() == Magic.toUpperCase().hashCode())
+                } else if (Choice.toUpperCase().hashCode() == Magic.hashCode())
                 {
                     break;
-                } else if (Choice.toUpperCase().hashCode() == Flee.toUpperCase().hashCode())
+                } else if (Choice.toUpperCase().hashCode() == Flee.hashCode())
                 {
                     break;
-                } else if(Choice.toUpperCase().hashCode() == Inventory.toUpperCase().hashCode())
+                } else if(Choice.toUpperCase().hashCode() == Inventory.hashCode())
                 {
                     break;
-                }else if(Choice.toUpperCase().hashCode() == Equip.toUpperCase().hashCode())
+                }else if(Choice.toUpperCase().hashCode() == Equip.hashCode())
                 {
                     break;
                 }
@@ -108,7 +108,95 @@ public class Functions
         }
     }
 
-    public static void usePotion()
+    public static void tryToEnterPotionInventory()
+    {
+       //try
+        //if healing
+        //useHealingPotion
+        //if hp
+        //useHpPotion
+        //catch
+    }
+    public static void useMpPotion()
+    {
+        boolean inStore = true;
+        if(CharacterStats.Character.cMP != CharacterStats.Character.MaxMP)
+        {
+            while(inStore)
+            {
+                try
+                {
+                    print("How many potions do you want to use (You have: " + CharacterStats.Character.amountOfMpPotions + " potions)");
+                    Scanner input = new Scanner(System.in);
+                    int amount = input.nextInt();
+                    if(amount <= CharacterStats.Character.amountOfMpPotions)
+                    {
+                        print("You used a Potion");
+                        for(int i=1; i <= amount; i++)
+                        {
+                            //TODO: Finish this
+                            for(int x = 0; x < PotionInventory.values().length; x++)
+                            {
+                                if(potionInventory.getPotionInInventory(x).equipped)
+                                {
+                                    for(int y = 0; y < TotalHealingPotions.values().length; y++)
+                                    {
+                                        if(potionInventory.getPotionInInventory(x).item == TotalHealingPotions.getPotion(y).name)
+                                        {
+                                            if(CharacterStats.Character.cHP != CharacterStats.Character.MaxHP)
+                                            {
+                                                int health = CharacterStats.Character.cHP;
+                                                if(CharacterStats.Character.amountOfHealingPotions > 0)
+                                                {
+                                                    health  = health + TotalHealingPotions.getPotion(y).totalHealingPower;
+                                                    if(health <= CharacterStats.Character.MaxHP)
+                                                    {
+                                                        print("You gained " + TotalHealingPotions.getPotion(y).totalHealingPower + " health");
+                                                        CharacterStats.Character.cHP = CharacterStats.Character.cHP + TotalHealingPotions.getPotion(y).totalHealingPower;
+                                                        TotalHealingPotions.getPotion(y).amount--;
+                                                        CharacterStats.Character.amountOfHealingPotions = TotalHealingPotions.getPotion(y).amount;
+                                                    }
+                                                    else
+                                                    {
+                                                        int num=0;
+                                                        while(num != CharacterStats.Character.MaxHP - CharacterStats.Character.cHP)
+                                                        {
+                                                            num++;
+                                                        }
+                                                        print("You gained " + num + " health");
+                                                        CharacterStats.Character.cHP = CharacterStats.Character.cHP + num;
+                                                        TotalHealingPotions.getPotion(y).amount--;
+                                                        CharacterStats.Character.amountOfHealingPotions = TotalHealingPotions.getPotion(y).amount;
+                                                    }
+
+                                                } else
+                                                {
+                                                    print("You have no more potions ");
+                                                    break;
+                                                }
+                                            }
+                                            else
+                                            {
+                                                System.out.println("You are at full health");
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        print("You can't use that many.");
+                    }
+                }
+                catch(InputMismatchException e){print("Please enter a number: ");}
+            }
+        }
+    }
+
+    public static void useHealingPotion()
     {
         if(CharacterStats.Character.cHP != CharacterStats.Character.MaxHP)
         {
@@ -118,48 +206,48 @@ public class Functions
                 try
                 {
 
-                    print("How many Potions do you want to use? (You have: " + CharacterStats.Character.amountOfPotions + " potions)");
+                    print("How many Potions do you want to use? (You have: " + CharacterStats.Character.amountOfHealingPotions + " potions)");
 
                     Scanner input = new Scanner(System.in);
                     int amount = input.nextInt();
 
-                    if(amount <= CharacterStats.Character.amountOfPotions)
+                    if(amount <= CharacterStats.Character.amountOfHealingPotions)
                     {
                         print("You used a Potion");
-                        for(int i = 0; i <= amount; i++)
+                        for(int i = 1; i <= amount; i++)
                         {
                             for(int x = 0; x < PotionInventory.values().length; x++)
                             {
-                                if(potionInventory.getPotionInInventory(x).equiped)
+                                if(potionInventory.getPotionInInventory(x).equipped)
                                 {
-                                    for(int y = 0; y < TotalPotions.values().length; y++)
+                                    for(int y = 0; y < TotalHealingPotions.values().length; y++)
                                     {
-                                        if(potionInventory.getPotionInInventory(x).item == TotalPotions.getPotion(y).name)
+                                        if(potionInventory.getPotionInInventory(x).item == TotalHealingPotions.getPotion(y).name)
                                         {
                                             if(CharacterStats.Character.cHP != CharacterStats.Character.MaxHP)
                                             {
                                                 int health = CharacterStats.Character.cHP;
-                                                if(CharacterStats.Character.amountOfPotions > 0)
+                                                if(CharacterStats.Character.amountOfHealingPotions > 0)
                                                 {
-                                                    health  = health + TotalPotions.getPotion(y).totalHealingPower;
+                                                    health  = health + TotalHealingPotions.getPotion(y).totalHealingPower;
                                                     if(health <= CharacterStats.Character.MaxHP)
                                                     {
-                                                        print("You gained " + TotalPotions.getPotion(y).totalHealingPower + " health");
-                                                        CharacterStats.Character.cHP = CharacterStats.Character.cHP + TotalPotions.getPotion(y).totalHealingPower;
-                                                        TotalPotions.getPotion(y).amount--;
-                                                        CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(y).amount;
+                                                        print("You gained " + TotalHealingPotions.getPotion(y).totalHealingPower + " health");
+                                                        CharacterStats.Character.cHP = CharacterStats.Character.cHP + TotalHealingPotions.getPotion(y).totalHealingPower;
+                                                        TotalHealingPotions.getPotion(y).amount--;
+                                                        CharacterStats.Character.amountOfHealingPotions = TotalHealingPotions.getPotion(y).amount;
                                                     }
                                                     else
                                                     {
                                                         int num=0;
-                                                            while(num != CharacterStats.Character.MaxHP - CharacterStats.Character.cHP)
-                                                            {
-                                                                num++;
-                                                            }
-                                                            print("You gained " + num + " health");
-                                                            CharacterStats.Character.cHP = CharacterStats.Character.cHP + num;
-                                                            TotalPotions.getPotion(y).amount--;
-                                                            CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(y).amount;
+                                                        while(num != CharacterStats.Character.MaxHP - CharacterStats.Character.cHP)
+                                                        {
+                                                            num++;
+                                                        }
+                                                        print("You gained " + num + " health");
+                                                        CharacterStats.Character.cHP = CharacterStats.Character.cHP + num;
+                                                        TotalHealingPotions.getPotion(y).amount--;
+                                                        CharacterStats.Character.amountOfHealingPotions = TotalHealingPotions.getPotion(y).amount;
                                                     }
 
                                                 } else
@@ -179,7 +267,7 @@ public class Functions
                             }
 
                         }
-                        print("You have " + CharacterStats.Character.amountOfPotions + " left");
+                        print("You have " + CharacterStats.Character.amountOfHealingPotions + " left");
                         print("Health: " + CharacterStats.Character.cHP);
                         break;
                     } else
@@ -267,13 +355,13 @@ public class Functions
                     checkInventory.chooseWhichPotionToEquip();
                     for(int i=0; i<PotionInventory.values().length; i++)
                     {
-                        if(PotionInventory.getPotionInInventory(i).equiped)
+                        if(PotionInventory.getPotionInInventory(i).equipped)
                         {
-                            for(int x=0; x<TotalPotions.values().length; x++)
+                            for(int x = 0; x < TotalHealingPotions.values().length; x++)
                             {
-                                if(PotionInventory.getPotionInInventory(i).item == TotalPotions.getPotion(x).name)
+                                if(PotionInventory.getPotionInInventory(i).item == TotalHealingPotions.getPotion(x).name)
                                 {
-                                    CharacterStats.Character.amountOfPotions = TotalPotions.getPotion(x).amount;
+                                    CharacterStats.Character.amountOfHealingPotions = TotalHealingPotions.getPotion(x).amount;
                                 }
                             }
                         }

@@ -115,7 +115,7 @@ public class playerMovement
                                 {
                                     functions.clearConsole();
                                     Thread.sleep(750);
-                                    functions.usePotion();
+                                    functions.tryToEnterPotionInventory();
                                     break;
                                 }
                                 else

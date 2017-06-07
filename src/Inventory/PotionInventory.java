@@ -1,10 +1,11 @@
 package Inventory;
 
-import totalItems.TotalPotions;
+import totalItems.TotalHealingPotions;
+import totalItems.TotalMpPotions;
 
 public enum PotionInventory
 {
-    Space0(TotalPotions.simplePotion.name, 0, true),
+    Space0(TotalHealingPotions.simplePotion.name, 0, true),
     Space1("empty",1,false),
     Space2("empty",2,false),
     Space3("empty",3,false),
@@ -13,7 +14,7 @@ public enum PotionInventory
     Space6("empty",6,false),
     Space7("empty",7,false),
     Space8("empty",8,false),
-    Space9(TotalPotions.bread.name,9,false);
+    Space9(TotalMpPotions.simpleHp.name, 9, false);
 
     public String item;
     String space0;
@@ -26,7 +27,7 @@ public enum PotionInventory
     String space7;
     String space8;
     String space9;
-    public boolean equiped;
+    public boolean equipped;
     PotionInventory(String item, int x, boolean equiped)
     {
         this.item = item;
@@ -61,7 +62,7 @@ public enum PotionInventory
         {
             space9 = item;
         }
-        this.equiped = equiped;
+        this.equipped = equiped;
     }
     public static PotionInventory getPotionInInventory(int i)
     {
