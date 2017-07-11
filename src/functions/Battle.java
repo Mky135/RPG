@@ -32,7 +32,7 @@ public class Battle
         Thread.sleep(1000);
         checkInventory.equipSword();
         checkInventory.equipSpell();
-        checkInventory.equipPotions();
+        checkInventory.equipHealingPotions();
 
         while (monster.mHP > 0 && functions.isCharacterDied() != true)
         {
@@ -83,7 +83,7 @@ public class Battle
             {
                 functions.clearConsole();
                 Thread.sleep(750);
-                functions.tryToEnterPotionInventory();
+                functions.tryToEnterPotionUsage();
             }
         }
         if(monster.mHP <= 0)

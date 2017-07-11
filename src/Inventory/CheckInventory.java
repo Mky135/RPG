@@ -132,7 +132,7 @@ public class CheckInventory
         }
     }
 
-    public static void equipPotions()
+    public static void equipHealingPotions()
     {
      for(int i=0; i<PotionInventory.values().length; i++)
      {
@@ -142,7 +142,7 @@ public class CheckInventory
              {
                  if(PotionInventory.getPotionInInventory(i).item == TotalHealingPotions.getPotion(x).name)
                  {
-                     CharacterStats.Character.amountOfPotions = TotalHealingPotions.getPotion(x).amount;
+                     CharacterStats.Character.amountOfHealingPotions = TotalHealingPotions.getPotion(x).amount;
                  }
              }
          }

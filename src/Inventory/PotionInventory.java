@@ -33,6 +33,7 @@ public enum PotionInventory
         this.item = item;
         if(x == 0)
         {
+
             space0 = item;
         } else if(x == 1)
         {
